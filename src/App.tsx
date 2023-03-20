@@ -7,9 +7,11 @@ import BannerWrapper from './component/BannerWrapper'
 function App (): JSX.Element {
   return <>
     <div className='App'>
+
       <BannerWrapper />
       <ProductWidget />
       {/* <header className='App-header'>
+
         <img
 
           src={logo}
@@ -20,7 +22,7 @@ function App (): JSX.Element {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className='App-link'
+          className='AppLink'
           href='https://reactjs.org'
           target='_blank'
           rel='noopener noreferrer'>
