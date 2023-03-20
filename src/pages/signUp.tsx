@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-/* eslint-disable @typescript-eslint/space-before-function-paren */
+
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function signUp(): React.ReactElement {
+function SignUp (): React.ReactElement {
   const [inputEmail, setInputEmail] = useState('')
   const [inputPass, setInputPass] = useState('')
   const [inputName, setInputName] = useState('')
@@ -20,9 +20,7 @@ function signUp(): React.ReactElement {
     setInputName(e.target.value)
   }
 
-  const handlePasswordChange = (e: {
-    target: { value: React.SetStateAction<string> }
-  }) => {
+  const handlePasswordChange = (e: { target: { value: React.SetStateAction<string> } }) => {
     setInputPass(e.target.value)
   }
 
@@ -197,4 +195,4 @@ function signUp(): React.ReactElement {
   )
 }
 
-export default signUp
+export default SignUp

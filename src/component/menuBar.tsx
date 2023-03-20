@@ -5,7 +5,8 @@ function menuBar (): React.ReactElement {
   return (
     <section className='flex items-center relative justify-center '>
       <button className='relative'>
-        <ul className='flex items-center relative text-[#131246] gap-5 font-poppins font-medium text-xs leading-6'>
+        <ul className='flex items-center relative text-[#131246] gap-5
+          font-poppins font-medium text-xs leading-6'>
           <li>
             <Link to='index.html'>Home</Link>
           </li>
