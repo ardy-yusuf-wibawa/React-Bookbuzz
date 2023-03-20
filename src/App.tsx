@@ -1,11 +1,17 @@
-import logo from './logo.svg'
+// import logo from './logo.svg'
 import './App.css'
 import React from 'react'
+import ProductWidget from './component/ProductWidget'
+import BannerWrapper from './component/BannerWrapper'
 
 function App (): JSX.Element {
-  return (
+  return <>
     <div className='App'>
-      <header className='AppHeader'>
+
+      <BannerWrapper />
+      <ProductWidget />
+      {/* <header className='App-header'>
+
         <img
 
           src={logo}
@@ -22,9 +28,9 @@ function App (): JSX.Element {
           rel='noopener noreferrer'>
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
-  )
+  </>
 }
 
 export default App
