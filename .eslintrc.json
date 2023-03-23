@@ -16,21 +16,16 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
+
   "plugins": [
     "react",
     "@typescript-eslint",
     "react-hooks"
   ],
+
   "rules": {
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
     "@typescript-eslint/dot-notation": "error",
+
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": [
       "error"
@@ -63,4 +58,5 @@
     }
   },
   "parser": "@typescript-eslint/parser"
+
 }
