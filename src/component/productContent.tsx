@@ -1,28 +1,27 @@
 import React from 'react'
+import '@fontsource/poppins'
+import '@fontsource/inter'
 
-function productContent (): React.ReactElement {
+function productContent(): React.ReactElement {
   return (
-    <>
-      <section className='relative flex container items-center mx-auto px-4 py-4'>
-        <div className='relative container flex w-1/4 justify-between'>
-          <span></span>
-        </div>
-        <div className='w-2/4 flex justify-center'>
-          <span className='relative font-[inter]
-            font-normal text-[24px] leading-[29px] tracking-[.075em]
+    <div>
+      <section className='relative flex container justify-center mx-auto px-4 py-4'>
+        <span
+          className='relative font-inter items-center justify-center text-center
+            font-normal text-[20px] sm:text-[24px] leading-[29px] tracking-[.075em]
             text-[#131246]'>
-            Our Product
-          </span>
-        </div>
-        <div className='relative container flex w-1/4 justify-end'>
-          <span></span>
-        </div>
+          Our Product
+        </span>
       </section>
       {/* Text */}
-      <div className='flex justify-center font-[inter] text-[14px]
-        leading-[17px] pb-[43px] text-slate-900/50'>
-        Mirum est notare quam littera gothica, quam nunc putamus parum claram
-        anteposuerit litterarum formas.
+      <div
+        className='flex justify-center font-inter text-[14px] text-center p-2
+        leading-[17px] text-slate-900/50'>
+        Mirum est notare quam
+        littera gothica, quam
+        nunc putamus parum
+        claram anteposuerit
+        litterarum formas.
       </div>
       {/* menubar */}
       <section className='flex items-center relative justify-center '>
@@ -31,28 +30,28 @@ function productContent (): React.ReactElement {
             <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
               <a
                 href='index.html'
-                className='font-[inter] text-[14px] leading-[17px]'>
+                className='font-inter text-[14px] leading-[17px]'>
                 Adventure
               </a>
             </li>
             <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
               <a
                 href='index.html'
-                className='font-[inter] text-[14px] leading-[17px]'>
+                className='font-inter text-[14px] leading-[17px]'>
                 Novel
               </a>
             </li>
             <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
               <a
                 href='index.html'
-                className='font-[inter] text-[14px] leading-[17px]'>
+                className='font-inter text-[14px] leading-[17px]'>
                 Sci-Fi
               </a>
             </li>
             <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
               <a
                 href='index.html'
-                className='font-[inter] text-[14px] leading-[17px]'>
+                className='font-inter text-[14px] leading-[17px]'>
                 Self-Help
               </a>
             </li>
@@ -61,7 +60,9 @@ function productContent (): React.ReactElement {
       </section>
       {/* // <!-- carousel --> */}
       <section className='py-10 relative container mx-auto lg:w-[90%] px-4 w-full'>
-        <div className='container mx-auto grid px-4 w-full sm:py-[20px] sm:grid-cols-4 sm:gap-[2.3vw] pt-10 pb-10 grid-cols-2 gap-y-[60px] gap-[4vw]'>
+        <div
+          className='container mx-auto grid px-4 w-full
+        sm:grid-cols-4 sm:gap-[2.3vw] grid-cols-2 gap-y-[60px] gap-[4vw]'>
           <div className='z-10 flex w-full'>
             <button className='invisible sm:visible flex items-center justify-center bg-white rounded-full shadow-[0_2px_5px_-0px_rgba(0,0,0,0.3)] absolute top-[50%] w-[42px] h-[42px] -left-[0.6vw]'>
               <svg
@@ -104,7 +105,7 @@ function productContent (): React.ReactElement {
               className='sm:w-full h-auto sm:mb-5 w-[60%] mb-2.5 items-center'
             />
             <div className='flex'>
-              <a className='font-normal font-[inter] sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
+              <a className='font-normal font-inter sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
                 Vendor 01
               </a>
               <svg
@@ -159,10 +160,10 @@ function productContent (): React.ReactElement {
               </svg>
             </div>
 
-            <span className='font-bold font-[Poppins] sm:text-[12px] text-[10px] leading-5'>
+            <span className='font-bold font-poppins sm:text-[12px] text-[10px] leading-5'>
               Test Product
             </span>
-            <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
+            <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
               $20
             </span>
           </div>
@@ -178,7 +179,7 @@ function productContent (): React.ReactElement {
             />
 
             <div className='flex'>
-              <a className='font-normal font-[inter] sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
+              <a className='font-normal font-inter sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
                 Vendor 01
               </a>
               <svg
@@ -229,7 +230,8 @@ function productContent (): React.ReactElement {
                 height='1em'
                 width='9.4px'
                 xmlns='http://www.w3.org/2000/svg'>
-                <path d='M508.55 171.51L362.18 150.2 296.77
+                <path
+                  d='M508.55 171.51L362.18 150.2 296.77
                   17.81C290.89 5.98 279.42 0 267.95 0c-11.4
                   0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25
                   3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98
@@ -243,10 +245,10 @@ function productContent (): React.ReactElement {
               </svg>
             </div>
 
-            <span className='font-bold font-[Poppins] sm:text-[12px] text-[10px] leading-5'>
+            <span className='font-bold font-poppins sm:text-[12px] text-[10px] leading-5'>
               Test Product
             </span>
-            <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
+            <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
               $20
             </span>
           </div>
@@ -262,7 +264,7 @@ function productContent (): React.ReactElement {
             />
 
             <div className='flex'>
-              <a className='font-normal font-[inter] sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
+              <a className='font-normal font-inter sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
                 Vendor 01
               </a>
               <svg
@@ -317,10 +319,10 @@ function productContent (): React.ReactElement {
               </svg>
             </div>
 
-            <span className='font-bold font-[Poppins] sm:text-[12px] text-[10px] leading-5'>
+            <span className='font-bold font-poppins sm:text-[12px] text-[10px] leading-5'>
               Test Product
             </span>
-            <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
+            <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
               $20
             </span>
           </div>
@@ -336,7 +338,7 @@ function productContent (): React.ReactElement {
             />
 
             <div className='flex'>
-              <a className='font-normal font-[inter] sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
+              <a className='font-normal font-inter sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
                 Vendor 01
               </a>
               <svg
@@ -391,10 +393,10 @@ function productContent (): React.ReactElement {
               </svg>
             </div>
 
-            <span className='font-bold font-[Poppins] sm:text-[12px] text-[10px] leading-5'>
+            <span className='font-bold font-poppins sm:text-[12px] text-[10px] leading-5'>
               Test Product
             </span>
-            <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
+            <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
               $20
             </span>
           </div>
@@ -410,7 +412,7 @@ function productContent (): React.ReactElement {
             />
 
             <div className='flex'>
-              <a className='font-normal font-[inter] sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
+              <a className='font-normal font-inter sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
                 Vendor 01
               </a>
               <svg
@@ -467,14 +469,14 @@ function productContent (): React.ReactElement {
               </svg>
             </div>
 
-            <span className='font-bold font-[Poppins] sm:text-[12px] text-[10px] leading-5'>
+            <span className='font-bold font-poppins sm:text-[12px] text-[10px] leading-5'>
               Test Product
             </span>
             <div className='flex gap-5'>
-              <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
+              <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
                 $20
               </span>
-              <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-slate-900/30 line-through'>
+              <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-slate-900/30 line-through'>
                 $20
               </span>
             </div>
@@ -491,7 +493,7 @@ function productContent (): React.ReactElement {
             />
 
             <div className='flex'>
-              <a className='font-normal font-[inter] sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
+              <a className='font-normal font-inter sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
                 Vendor 01
               </a>
               <svg
@@ -546,14 +548,14 @@ function productContent (): React.ReactElement {
               </svg>
             </div>
 
-            <span className='font-bold font-[Poppins] sm:text-[12px] text-[10px] leading-5'>
+            <span className='font-bold font-poppins sm:text-[12px] text-[10px] leading-5'>
               Test Product
             </span>
             <div className='flex gap-5'>
-              <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
+              <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
                 $20
               </span>
-              <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-slate-900/30 line-through'>
+              <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-slate-900/30 line-through'>
                 $20
               </span>
             </div>
@@ -570,7 +572,7 @@ function productContent (): React.ReactElement {
             />
 
             <div className='flex'>
-              <a className='font-normal font-[inter] sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
+              <a className='font-normal font-inter sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
                 Vendor 01
               </a>
               <svg
@@ -625,14 +627,14 @@ function productContent (): React.ReactElement {
               </svg>
             </div>
 
-            <span className='font-bold font-[Poppins] sm:text-[12px] text-[10px] leading-5'>
+            <span className='font-bold font-poppins sm:text-[12px] text-[10px] leading-5'>
               Test Product
             </span>
             <div className='flex gap-5'>
-              <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
+              <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
                 $20
               </span>
-              <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-slate-900/30 line-through'>
+              <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-slate-900/30 line-through'>
                 $20
               </span>
             </div>
@@ -649,7 +651,7 @@ function productContent (): React.ReactElement {
             />
 
             <div className='flex'>
-              <a className='font-normal font-[inter] sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
+              <a className='font-normal font-inter sm:text-[12px] text-[10px] text-slate-900/60 leading-4 pr-[20px]'>
                 Vendor 01
               </a>
               <svg
@@ -704,21 +706,21 @@ function productContent (): React.ReactElement {
               </svg>
             </div>
 
-            <span className='font-bold font-[Poppins] sm:text-[12px] text-[10px] leading-5'>
+            <span className='font-bold font-poppins sm:text-[12px] text-[10px] leading-5'>
               Test Product
             </span>
             <div className='flex gap-5'>
-              <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
+              <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
                 $20
               </span>
-              <span className='font-bold font[inter] sm:text-[14px] text-[10px] leading-4 text-slate-900/30 line-through'>
+              <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-slate-900/30 line-through'>
                 $20
               </span>
             </div>
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

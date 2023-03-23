@@ -24,4 +24,8 @@ ikuti instalasi pada pertemuan react part 5
 # pull request selalu dibandingkan dengan branch development
 
 # npm i @heroicons/react
+# npm i @fontsource/montserrat-alternates
 
+# npm i @fontsource/poppins
+
+# npm i @fontsource/inter

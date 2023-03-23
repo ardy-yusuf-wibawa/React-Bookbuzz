@@ -1,18 +1,22 @@
 import React from 'react'
 import NavBar from '../component/navBar'
-import MenuBar from '../component/menuBar'
-import ProductContent from '../component/productContent'
 
-const landingPage = (): React.ReactElement => {
-  return (
-    <div className='w-[100vw] mx-auto h-[100vh]'>
-      <div className='static'>
-        <NavBar />
-        <MenuBar />
-        <ProductContent />
+import ProductContent from '../component/productContent'
+import BannerWrapper from '../component/BannerWrapper'
+import ProductWidget from '../component/ProductWidget'
+
+const landingPage =
+  (): React.ReactElement => {
+    return (
+      <div className='w-[100vw] mx-auto h-[100vh]'>
+        <div className='static'>
+          <NavBar />
+          <ProductContent />
+          <BannerWrapper />
+          <ProductWidget />
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
 export default landingPage
