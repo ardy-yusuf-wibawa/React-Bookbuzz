@@ -31,9 +31,7 @@ function NavBar(): React.ReactElement {
                 <Link to='index.html'>Home</Link>
               </li>
               <li className='hidden sm:block'>
-                <Link to='/productlist'>
-                  Shop
-                </Link>
+                <Link to='/'>Shop</Link>
               </li>
               <li className='hidden sm:block'>
                 <Link to='/about'>About</Link>
