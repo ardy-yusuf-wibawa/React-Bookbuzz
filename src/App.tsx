@@ -1,8 +1,16 @@
-import ContactUs from './ContactUs';
-import './App.css';
+import React from "react";
 
-function App() {
-  return <ContactUs />;
+import CategoryWrapper from "./components/CategoryWrapper";
+import Footer from "./components/Footer";
+import "./App.css";
+
+function App(): JSX.Element {
+  return (
+    <>
+      <CategoryWrapper />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
