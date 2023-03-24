@@ -1,24 +1,8 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-function LogIn (): React.ReactElement {
-  const [inputEmail, setInputEmail] = useState('')
-  const [inputPass, setInputPass] = useState('')
-
-  const handleEmailChange = (e: {
-    target: { value: React.SetStateAction<string> }
-  }) => {
-    setInputEmail(e.target.value)
-  }
-
-  const handlePasswordChange = (e: {
-    target: { value: React.SetStateAction<string> }
-  }) => {
-    setInputPass(e.target.value)
-  }
-
+function LogIn(): React.ReactElement {
   return (
     <section className='mx-auto w-full max-h-[100vh] relative'>
       <div className='flex-col flex left-0 top-0 items-center w-full h-[90%] '>
@@ -45,25 +29,23 @@ function LogIn (): React.ReactElement {
                           className="after:content-['*'] after:text-red-500 font-inter font-medium text-[14px] leading-5 text-[#344054] w-[47px] h-[20px]">
                           Email
                         </label>
-                        <form>
-                          <input
-                            type='email'
-                            name='user_full_name'
-                            placeholder='Enter your email'
-                            className='peer flex flex-row items-center
+
+                        <input
+                          type='email'
+                          name='user_full_name'
+                          placeholder='Enter your email'
+                          className='peer flex flex-row items-center
                           gap-2 box-border h-[44px]
                           w-full lg:w-[360px] px-[10px] py-[14px] text-[16px] leading-6
                           rounded-lg border-2 border-solid border-gray-300
                           text-[#344054] focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                           invalid:border-pink-500 invalid:text-pink-600
                           focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                            value={inputEmail}
-                            onChange={handleEmailChange}
-                          />
-                          <div className='mt-2 hidden peer-invalid:block text-pink-600 text-sm'>
-                            Please provide a valid email address.
-                          </div>
-                        </form>
+                        />
+                        <div className='mt-2 hidden peer-invalid:block text-pink-600 text-sm'>
+                          Please provide a valid
+                          email address.
+                        </div>
                       </div>
                     </div>
                     <div className='flex flex-col items-start p-0 w-full lg:w-[360px] h-[70px]'>
@@ -84,12 +66,11 @@ function LogIn (): React.ReactElement {
                           focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                           invalid:border-pink-500 invalid:text-pink-600
                           focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                            value={inputPass}
-                            onChange={handlePasswordChange}
                           />
                         </form>
                         <span className='w-full  lg:w-[360px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
-                          Must be at least 8 characters.
+                          Must be at least 8
+                          characters.
                         </span>
                       </div>
                     </div>
@@ -134,13 +115,15 @@ function LogIn (): React.ReactElement {
                   </div>
                 </div>
                 <div className='w-[360px] h-[20px] flex flex-row justify-center items-start p-0 gap-1'>
-                  <span className='w-[130px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
+                  <span className='w-[140px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
                     Don't have account ?
                   </span>
                   <div className='flex flex-row items-start p-0 w-[51px] h-[20px]'>
                     <button className='flex flex-row justify-center items-center p-0 gap-2 w-[51px] h-[20px] '>
-                      <Link to='/signup'>
-                        <span className='w-[51px] h-[20px] font-inter font-semibold text-[14px] leading-5 text-black'>
+                      <Link
+                        to='/signup'
+                        className='flex'>
+                        <span className='w-[80px] h-[20px] font-inter font-semibold text-[14px] leading-5 text-black'>
                           Sign Up
                         </span>
                       </Link>
