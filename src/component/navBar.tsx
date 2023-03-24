@@ -28,7 +28,7 @@ function NavBar(): React.ReactElement {
               className='flex items-center relative text-[#131246] gap-5
           font-popp font-medium text-base leading-6'>
               <li className='hidden sm:block'>
-                <Link to='index.html'>Home</Link>
+                <Link to='#'>Home</Link>
               </li>
               <li className='hidden sm:block'>
                 <Link to='/'>Shop</Link>

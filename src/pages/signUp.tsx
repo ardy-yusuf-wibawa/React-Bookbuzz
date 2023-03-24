@@ -1,37 +1,9 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 function SignUp(): React.ReactElement {
-  const [inputEmail, setInputEmail] = useState('')
-  const [inputPass, setInputPass] = useState('')
-  const [inputName, setInputName] = useState('')
-
-  const handleEmailChange = (e: {
-    target: {
-      value: React.SetStateAction<string>
-    }
-  }) => {
-    setInputEmail(e.target.value)
-  }
-
-  const handleNameChange = (e: {
-    target: {
-      value: React.SetStateAction<string>
-    }
-  }) => {
-    setInputName(e.target.value)
-  }
-
-  const handlePasswordChange = (e: {
-    target: {
-      value: React.SetStateAction<string>
-    }
-  }) => {
-    setInputPass(e.target.value)
-  }
-
   return (
     <section className='mx-auto w-full max-h-[100vh] relative'>
       <div className='flex-col flex left-0 top-0 items-center w-full h-[90%]'>
@@ -69,10 +41,6 @@ function SignUp(): React.ReactElement {
                                         text-[#344054] focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                                         invalid:border-pink-500 invalid:text-pink-600
                                         focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                          value={inputName}
-                          onChange={
-                            handleNameChange
-                          }
                         />
                       </div>
                     </div>
@@ -95,10 +63,6 @@ function SignUp(): React.ReactElement {
                                         text-[#344054] focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                                         invalid:border-pink-500 invalid:text-pink-600
                                         focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                          value={inputEmail}
-                          onChange={
-                            handleEmailChange
-                          }
                         />
                         <div className='mt-[2px] hidden peer-invalid:block text-pink-600 text-sm'>
                           Please provide a valid
@@ -124,10 +88,6 @@ function SignUp(): React.ReactElement {
                                         focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                                         invalid:border-pink-500 invalid:text-pink-600
                                         focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                          value={inputPass}
-                          onChange={
-                            handlePasswordChange
-                          }
                         />
                         <span className='w-full lg:w-[360px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
                           Must be at least 8
