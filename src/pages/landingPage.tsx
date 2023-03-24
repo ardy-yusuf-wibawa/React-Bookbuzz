@@ -4,6 +4,8 @@ import NavBar from '../component/navBar'
 import ProductContent from '../component/productContent'
 import BannerWrapper from '../component/BannerWrapper'
 import ProductWidget from '../component/ProductWidget'
+import ShippingDescWrapper from '../component/ShippingDescWrapper'
+import SubscribeWrapper from '../component/SubscribeWrapper'
 
 const landingPage =
   (): React.ReactElement => {
@@ -14,6 +16,8 @@ const landingPage =
           <ProductContent />
           <BannerWrapper />
           <ProductWidget />
+          <ShippingDescWrapper />
+          <SubscribeWrapper />
         </div>
       </div>
     )
