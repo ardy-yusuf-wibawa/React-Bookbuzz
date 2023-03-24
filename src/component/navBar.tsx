@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '@fontsource/montserrat-alternates/900-italic.css'
 import '@fontsource/poppins'
 
-function navBar(): React.ReactElement {
+function NavBar(): React.ReactElement {
   return (
     <section className='flex flex-row w-[100%] sm:h-[100px] justify-between items-center top-0 sm:px-[10px] z-[9999] bg-[#f6f6f6]'>
       <div className='mt-[5px] relative flex left-[10px] sm:left-[24px] items-start self-start w-[85px] h-[85px] sm:w-[90px] sm:h-[90px] pl-[15px] sm:pl-[20px] rounded-full bg-gradient-to-bl from-[#6a79ff] to-[#fb4e97] drop-shadow-[0_1px_3px_rgba(16,24,40,0.1)]'>
@@ -28,24 +28,18 @@ function navBar(): React.ReactElement {
               className='flex items-center relative text-[#131246] gap-5
           font-popp font-medium text-base leading-6'>
               <li className='hidden sm:block'>
-                <Link to='index.html'>
-                  Home
-                </Link>
+                <Link to='index.html'>Home</Link>
               </li>
               <li className='hidden sm:block'>
-                <Link to='index.html'>
+                <Link to='/productlist'>
                   Shop
                 </Link>
               </li>
               <li className='hidden sm:block'>
-                <Link to='/login'>
-                  About
-                </Link>
+                <Link to='/about'>About</Link>
               </li>
               <li className='hidden sm:block'>
-                <Link to='/signup'>
-                  Contact
-                </Link>
+                <Link to='/contact'>Contact</Link>
               </li>
             </ul>
           </button>
@@ -100,4 +94,4 @@ function navBar(): React.ReactElement {
   )
 }
 
-export default navBar
+export default NavBar

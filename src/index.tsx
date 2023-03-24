@@ -1,10 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import {
+  RouterProvider,
+  createBrowserRouter
+} from 'react-router-dom'
 import LandingPage from './pages/landingPage'
 import SignUp from './pages/signUp'
 import LogIn from './pages/logIn'
+import ContactUs from './pages/ContactUs'
+import AboutUs from './pages/About'
+import ProductList from './pages/productList'
 
 const router = createBrowserRouter([
   {
@@ -16,15 +22,30 @@ const router = createBrowserRouter([
     element: <LogIn />
   },
   {
+    path: '/about',
+    element: <AboutUs />
+  },
+  {
+    path: '/productlist',
+    element: <ProductList />
+  },
+  {
+    path: '/contact',
+    element: <ContactUs />
+  },
+  {
     path: '/signup',
     element: <SignUp />
   }
 ])
 
-const rootElement = document.getElementById('root')
+const rootElement =
+  document.getElementById('root')
 
 if (rootElement != null) {
-  ReactDOM.createRoot(rootElement).render(<RouterProvider router={router} />)
+  ReactDOM.createRoot(rootElement).render(
+    <RouterProvider router={router} />
+  )
 }
 
 // If you want to start measuring performance in your app, pass a function

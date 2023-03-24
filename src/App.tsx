@@ -1,8 +1,9 @@
-import ContactUs from './ContactUs';
-import './App.css';
+import ContactUs from './pages/ContactUs'
+import './App.css'
+import React from 'react'
 
-function App() {
-  return <ContactUs />;
+function App(): JSX.Element {
+  return <ContactUs />
 }
 
-export default App;
+export default App

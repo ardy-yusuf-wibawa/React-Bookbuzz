@@ -3,24 +3,32 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function SignUp (): React.ReactElement {
+function SignUp(): React.ReactElement {
   const [inputEmail, setInputEmail] = useState('')
   const [inputPass, setInputPass] = useState('')
   const [inputName, setInputName] = useState('')
 
   const handleEmailChange = (e: {
-    target: { value: React.SetStateAction<string> }
+    target: {
+      value: React.SetStateAction<string>
+    }
   }) => {
     setInputEmail(e.target.value)
   }
 
   const handleNameChange = (e: {
-    target: { value: React.SetStateAction<string> }
+    target: {
+      value: React.SetStateAction<string>
+    }
   }) => {
     setInputName(e.target.value)
   }
 
-  const handlePasswordChange = (e: { target: { value: React.SetStateAction<string> } }) => {
+  const handlePasswordChange = (e: {
+    target: {
+      value: React.SetStateAction<string>
+    }
+  }) => {
     setInputPass(e.target.value)
   }
 
@@ -61,8 +69,10 @@ function SignUp (): React.ReactElement {
                                         text-[#344054] focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                                         invalid:border-pink-500 invalid:text-pink-600
                                         focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                                        value={inputName}
-                                        onChange={handleNameChange}
+                          value={inputName}
+                          onChange={
+                            handleNameChange
+                          }
                         />
                       </div>
                     </div>
@@ -86,10 +96,13 @@ function SignUp (): React.ReactElement {
                                         invalid:border-pink-500 invalid:text-pink-600
                                         focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
                           value={inputEmail}
-                          onChange={handleEmailChange}
+                          onChange={
+                            handleEmailChange
+                          }
                         />
                         <div className='mt-[2px] hidden peer-invalid:block text-pink-600 text-sm'>
-                          Please provide a valid email address.
+                          Please provide a valid
+                          email address.
                         </div>
                       </div>
                     </div>
@@ -112,10 +125,13 @@ function SignUp (): React.ReactElement {
                                         invalid:border-pink-500 invalid:text-pink-600
                                         focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
                           value={inputPass}
-                          onChange={handlePasswordChange}
+                          onChange={
+                            handlePasswordChange
+                          }
                         />
                         <span className='w-full lg:w-[360px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
-                          Must be at least 8 characters.
+                          Must be at least 8
+                          characters.
                         </span>
                       </div>
                     </div>
@@ -147,12 +163,14 @@ function SignUp (): React.ReactElement {
                   </div>
                 </div>
                 <div className='w-[360px] h-[20px] flex flex-row justify-center items-start p-0 gap-1'>
-                  <span className='w-[171px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
+                  <span className='w-[175px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
                     Already have an account ?
                   </span>
                   <div className='flex flex-row items-start p-0 w-[41px] h-[20px]'>
                     <button className='flex flex-row justify-center items-center p-0 gap-2 w-[41px] h-[20px] '>
-                      <Link to='/login'>
+                      <Link
+                        to='/login'
+                        className='flex'>
                         <span className='w-[41px] h-[20px] font-inter font-semibold text-[14px] leading-5 text-black'>
                           Log in
                         </span>
