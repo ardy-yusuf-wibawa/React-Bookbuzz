@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/space-before-function-paren */
 import React from 'react'
 import NavBar from '../components/navBar'
+import Footer from '../components/Footer'
 
 function ContactUs(): JSX.Element {
   return (
     <>
       <NavBar />
       <section className='contact-section'>
-        <div className=' bg-slate-200 p-20'>
+        <div className='bg-[#f6f6f6] p-20'>
           <div className='text-4xl text-slate-900 text-center font-bold mt-4'>
             Contact Us
           </div>
@@ -69,7 +70,7 @@ function ContactUs(): JSX.Element {
               </label>
               <button
                 type='submit'
-                className='w-full bg-black text-white text-center text-xl py-5 px-3 h-12 rounded-xl hover:underline hover:bg-blue-700'>
+                className='w-full bg-black text-white text-center text-xl px-3 h-12 rounded-xl hover:underline hover:bg-blue-700'>
                 Sign In
               </button>
             </form>
@@ -97,7 +98,7 @@ function ContactUs(): JSX.Element {
                 accusantium.
               </p>
               <h3 className='mb-7 text-xl'>
-                AddressT
+                Address
               </h3>
               <h3>
                 123 Main Street, Anytown, CA 12345
@@ -107,6 +108,7 @@ function ContactUs(): JSX.Element {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   )
 }

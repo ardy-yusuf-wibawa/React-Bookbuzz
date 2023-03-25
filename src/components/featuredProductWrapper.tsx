@@ -17,11 +17,11 @@ const FeaturedProductWrapper =
           </p>
         </div>
 
-        <div className='flex flex-wrap gap-[30px] mx-[179px] mb-[106px] '>
+        <div className='flex flex-wrap gap-[30px] mx-[179px] mb-[106px] items-center justify-center '>
           {List.map((v, i) => {
             return (
               <Product
-                key={i}
+              key={i}
                 name={v.name}
                 category={v.category}
                 price={v.price}

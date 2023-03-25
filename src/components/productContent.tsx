@@ -3,20 +3,34 @@ import '@fontsource/poppins'
 import '@fontsource/inter'
 import Data from '../Data.json'
 import ContentData from './lib/contentData'
+import Pagination from './lib/pagination'
 
 function ProductContent(): React.ReactElement {
-  const [start, setStart] = useState(0)
-  const [end, setEnd] = useState(8)
+  const [currentPage, setCurrentPage] =
+    useState(1)
+  const itemsPerPage = 8
 
-  const handleNext = (): void => {
-    setStart(start + 8)
-    setEnd(end + 8)
+  const handlePageChange = (
+    pageNumber: number
+  ): void => {
+    setCurrentPage(pageNumber)
   }
 
   const handlePrev = (): void => {
-    setStart(start - 8)
-    setEnd(end - 8)
+    setCurrentPage((prevPage) => prevPage - 1)
   }
+
+  const handleNext = (): void => {
+    setCurrentPage((prevPage) => prevPage + 1)
+  }
+
+  const startIndex =
+    (currentPage - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+
+  const totalPages = Math.ceil(
+    Data.length / itemsPerPage
+  )
 
   return (
     <>
@@ -29,18 +43,18 @@ function ProductContent(): React.ReactElement {
         </span>
       </section>
       {/* Text */}
-      <div
+      <span
         className='flex justify-center font-inter text-[14px] text-center p-2
         leading-[17px] text-slate-900/50'>
         Mirum est notare quam littera gothica,
         quam nunc putamus parum claram
         anteposuerit litterarum formas.
-      </div>
+      </span>
       {/* menubar */}
       <section className='flex items-center relative justify-center '>
         <button className='relative'>
           <ul className='flex items-center relative gap-3'>
-            <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
+            <li className='rounded-sm text-slate-900/50 bg-slate-500/20'>
               <a
                 href='index.html'
                 className='font-inter text-[14px] leading-[17px]'>
@@ -72,17 +86,15 @@ function ProductContent(): React.ReactElement {
         </button>
       </section>
       {/* // <!-- carousel --> */}
-      <section className='py-10 relative container mx-auto lg:w-[90%] px-4 w-full'>
-        <div
-          className='container mx-auto grid px-4 w-full
-          sm:grid-cols-4 sm:gap-[2.3vw] grid-cols-2 gap-y-[60px] gap-[4vw]'>
+      <section className='relative container mx-auto lg:w-[90%] px-4 w-full'>
+        <div className='mx-auto flex px-4 w-full'>
           <div className='z-10 flex w-full'>
             <button
               className='invisible sm:visible flex items-center justify-center
              bg-white rounded-full shadow-[0_2px_5px_-0px_rgba(0,0,0,0.3)]
               absolute top-[50%] w-[42px] h-[42px] -left-[0.6vw]'
               onClick={handlePrev}
-              disabled={start === 0}>
+              disabled={currentPage === 1}>
               <svg
                 stroke='currentColor'
                 fill='currentColor'
@@ -101,7 +113,9 @@ function ProductContent(): React.ReactElement {
              bg-white rounded-full shadow-[0_2px_5px_-0px_rgba(0,0,0,0.3)]
               absolute top-[50%] w-[42px] h-[42px] -right-[0.8vw]'
               onClick={handleNext}
-              disabled={end >= Data.length}>
+              disabled={
+                currentPage === totalPages
+              }>
               <svg
                 stroke='currentColor'
                 fill='currentColor'
@@ -116,8 +130,8 @@ function ProductContent(): React.ReactElement {
             </button>
           </div>
         </div>
-        <div className='container mx-auto grid px-4 w-full sm:py-[20px] sm:grid-cols-4 sm:gap-[2.3vw] pt-10 pb-10 grid-cols-2 gap-y-[60px] gap-[4vw]'>
-          {Data.slice(start, end).map(
+        <div className='container mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-4 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
+          {Data.slice(startIndex, endIndex).map(
             (value, index) => {
               return (
                 <ContentData
@@ -136,6 +150,13 @@ function ProductContent(): React.ReactElement {
           )}
         </div>
       </section>
+      <div className='pt-[120px] md:pt-[50px] items-center justify-center flex'>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+      </div>
     </>
   )
 }

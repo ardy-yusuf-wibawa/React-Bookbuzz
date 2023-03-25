@@ -55,20 +55,20 @@ function LogIn(): React.ReactElement {
                           className="after:content-['*'] after:text-red-500 font-inter font-medium text-[14px] leading-5 text-[#344054] w-[97px] h-[20px]">
                           Password
                         </label>
-                        <form>
-                          <input
-                            type='password'
-                            name='user_password'
-                            placeholder='Enter your password'
-                            className='flex flex-row items-center gap-2 box-border h-[44px] w-full
+
+                        <input
+                          type='password'
+                          name='user_password'
+                          placeholder='Enter your password'
+                          className='flex flex-row items-center gap-2 box-border h-[44px] w-full
                           lg:w-[360px] px-[10px] py-[14px] text-[16px] leading-6 rounded-lg border-2
                           border-solid border-gray-300 text-[#344054]
                           focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                           invalid:border-pink-500 invalid:text-pink-600
                           focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                          />
-                        </form>
-                        <span className='w-full  lg:w-[360px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
+                        />
+
+                        <span className='w-full lg:w-[360px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
                           Must be at least 8
                           characters.
                         </span>

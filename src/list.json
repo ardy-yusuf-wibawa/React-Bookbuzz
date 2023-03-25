@@ -54,20 +54,6 @@
         "price" : "$20.00",
         "img" : "./book1.png",
         "star" : "./star.svg"
-    },
-    {
-        "name" : "vendor 01",
-        "category" : "1. Test Product",
-        "price" : "$20.00",
-        "img" : "./book1.png",
-        "star" : "./star.svg"
-    },
-    {
-        "name" : "vendor 01",
-        "category" : "1. Test Product",
-        "price" : "$20.00",
-        "img" : "./book1.png",
-        "star" : "./star.svg"
     }
     
 ]
