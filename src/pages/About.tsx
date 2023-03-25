@@ -1,8 +1,4 @@
 import React from 'react'
-import Intro1 from '../assets/Intro1.png'
-import Intro2 from '../assets/Intro2.png'
-import Intro3 from '../assets/Intro3.png'
-import Intro4 from '../assets/Intro4.png'
 
 const AboutUs = (): React.ReactElement => {
   return (
@@ -42,24 +38,24 @@ const AboutUs = (): React.ReactElement => {
         <div className='sm:inline-block md:flex items-center justify-center gap-4 mt-8'>
           <div className='w-1/2 inline'>
             <img
-              src={Intro1}
+              src='./Intro1.png'
               alt=''
               className='w-[310px] h-[230px]'
             />
             <img
-              src={Intro2}
+              src='./Intro2.png'
               alt=''
               className='w-[310px] h-[425px] top-[250px] mt-4'
             />
           </div>
           <div className='flex-none'>
             <img
-              src={Intro3}
+              src='./Intro3.png'
               alt=''
               className='w-[310px] h-[425px] top-[250px]'
             />
             <img
-              src={Intro4}
+              src='./Intro4.png'
               alt=''
               className='top-[250px] mt-4'
             />

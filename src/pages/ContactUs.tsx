@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/space-before-function-paren */
 import React from 'react'
-import NavBar from '../component/navBar'
+import NavBar from '../components/navBar'
 
 function ContactUs(): JSX.Element {
   return (

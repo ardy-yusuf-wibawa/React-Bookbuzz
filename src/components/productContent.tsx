@@ -17,11 +17,9 @@ function productContent(): React.ReactElement {
       <div
         className='flex justify-center font-inter text-[14px] text-center p-2
         leading-[17px] text-slate-900/50'>
-        Mirum est notare quam
-        littera gothica, quam
-        nunc putamus parum
-        claram anteposuerit
-        litterarum formas.
+        Mirum est notare quam littera gothica,
+        quam nunc putamus parum claram
+        anteposuerit litterarum formas.
       </div>
       {/* menubar */}
       <section className='flex items-center relative justify-center '>

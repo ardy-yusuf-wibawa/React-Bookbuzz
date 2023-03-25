@@ -19,7 +19,7 @@ function NavBar(): React.ReactElement {
           BOOKBUZZ.
         </span>
       </div> */}
-      {/* --model lama -- end */}
+      {/* --model baru -- end */}
 
       <div className='flex gap-[12px] sm:pr-5 pr-10'>
         <div className='flex items-center relative justify-center '>

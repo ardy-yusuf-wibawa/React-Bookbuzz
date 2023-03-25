@@ -10,24 +10,16 @@ function menuBar(): React.ReactElement {
           className='flex items-center relative text-[#131246] gap-5
           font-poppins font-medium text-xs leading-6'>
           <li>
-            <Link to='index.html'>
-              Home
-            </Link>
+            <Link to='index.html'>Home</Link>
           </li>
           <li>
-            <Link to='index.html'>
-              Shop
-            </Link>
+            <Link to='index.html'>Shop</Link>
           </li>
           <li>
-            <Link to='/login'>
-              About
-            </Link>
+            <Link to='/login'>About</Link>
           </li>
           <li>
-            <Link to='/signup'>
-              Contact
-            </Link>
+            <Link to='/signup'>Contact</Link>
           </li>
         </ul>
       </button>
