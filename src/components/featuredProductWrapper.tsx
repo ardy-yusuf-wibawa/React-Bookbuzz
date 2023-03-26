@@ -1,6 +1,7 @@
 import Product from './product'
 import List from '../list.json'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const FeaturedProductWrapper =
   (): React.ReactElement => {
@@ -16,21 +17,22 @@ const FeaturedProductWrapper =
             anteposuerit litterarum formas
           </p>
         </div>
-
+        <Link to='/product'>
         <div className='flex flex-wrap gap-[30px] mx-[179px] mb-[106px] items-center justify-center '>
           {List.map((v, i) => {
             return (
               <Product
               key={i}
-                name={v.name}
-                category={v.category}
-                price={v.price}
-                img={v.img}
-                star={v.star}
+              name={v.name}
+              category={v.category}
+              price={v.price}
+              img={v.img}
+              star={v.star}
               />
-            )
-          })}
+              )
+            })}
         </div>
+            </Link>
       </>
     )
   }

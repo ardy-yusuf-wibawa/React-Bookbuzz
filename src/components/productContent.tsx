@@ -4,6 +4,7 @@ import '@fontsource/inter'
 import Data from '../Data.json'
 import ContentData from './lib/contentData'
 import Pagination from './lib/pagination'
+import { Link } from 'react-router-dom'
 
 function ProductContent(): React.ReactElement {
   const [currentPage, setCurrentPage] =
@@ -130,25 +131,27 @@ function ProductContent(): React.ReactElement {
             </button>
           </div>
         </div>
+        <Link to='/product'>
         <div className='container mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-4 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
           {Data.slice(startIndex, endIndex).map(
             (value, index) => {
               return (
                 <ContentData
-                  key={index}
-                  name={value.name}
-                  img={value.img}
-                  rating={value.rating}
-                  nameProduct={value.nameProduct}
-                  price={value.price}
-                  discountPrice={
-                    value.discountPrice
-                  }
+                key={index}
+                name={value.name}
+                img={value.img}
+                rating={value.rating}
+                nameProduct={value.nameProduct}
+                price={value.price}
+                discountPrice={
+                  value.discountPrice
+                }
                 />
-              )
-            }
-          )}
+                )
+              }
+              )}
         </div>
+              </Link>
       </section>
       <div className='pt-[120px] md:pt-[50px] items-center justify-center flex'>
         <Pagination
