@@ -3,7 +3,8 @@ import React from 'react'
 const Footer = (): React.ReactElement => {
   return (
     <>
-      <footer>
+      {/* Before
+        <footer>
         <div className='p-10 bg-gray-300 text-black'>
           <div className='max-w-7xl mx-auto'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2'>
@@ -155,7 +156,100 @@ const Footer = (): React.ReactElement => {
             />
           </a>
         </div>
-      </footer>
+  </footer> */}
+
+  
+      <div className="bg-[#f6f6f6] text-black">
+        <div className="max-w-7xl mx-auto flex lg:flex-row min-[100px]:flex-col min-[100px]:gap-[50px] sm:justify-left py-[70px] min-[100px]:justify-center">
+            {/*logo dan about */}
+            <div className="flex flex-1  flex-col gap-[25px]">
+                <h1 className="text-[40px] font-bold">
+                    BOOKBUZZ
+                </h1>   
+                <div className="flex flex-col gap-[15px] opacity-70">
+                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse <br/>molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+                    <p>Address : No. 96, Cengkareng, Jakarta, Indonesia</p>
+                    <p>Phone : +1 1234 1234 1234</p>
+                    <p>Email : support@example.com</p>
+                </div>
+            </div>
+            {/* footer menu */}
+            <div className="flex flex-1 flex-row gap-[100px]">
+                <div className="flex flex-col gap-[35px]">
+                    <p className="font-bold text-[14px]" >Business Hour</p>
+                    <ul className="text-[14px] flex flex-col gap-[20px] opacity-70">
+                        <li>Mon - Fri: 8AM - 10PM</li>
+                        <li>Sat: 9AM - 8PM</li>
+                        <li>Sun: Closed</li>
+                    </ul>
+                </div>
+                <div className="flex flex-col gap-[35px] ">
+                    <p className="font-bold text-[14px]" >Footer Menu</p>
+                    <ul className="text-[14px] flex flex-col gap-[20px] ">
+                        <li>
+                          <a 
+                          className="opacity-70 hover:text-cyan-600"
+                          href="">Home
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                          className="opacity-70 hover:text-cyan-600"
+                          href="">Shop
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                          className="opacity-70 hover:text-cyan-600"
+                          href="">Subscribe
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                          className="opacity-70 hover:text-cyan-600"
+                          href="">About
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                          className="opacity-70 hover:text-cyan-600"
+                          href="">Contact
+                          </a>
+                        </li>
+                    </ul>
+                </div>
+                <div className="flex flex-col gap-[35px]">
+                    <p className="font-bold text-[14px]" >Business Hour</p>
+                    <ul className="text-[14px] flex flex-col gap-[20px]">
+                    <li>
+                          <a 
+                          className="opacity-70 hover:text-cyan-600"
+                          href="">About Us
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                          className="opacity-70 hover:text-cyan-600"
+                          href="">Our Office
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                          className="opacity-70 hover:text-cyan-600"
+                          href="">Delivery
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                          className="opacity-70 hover:text-cyan-600"
+                          href="">Our Store
+                          </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     </>
   )
 }
