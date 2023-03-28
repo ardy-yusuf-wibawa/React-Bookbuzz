@@ -6,7 +6,7 @@ import SubscribeWrapper from '../components/subscribeWrapper'
 import FeaturedProductWrapper from '../components/featuredProductWrapper'
 import Footer from '../components/Footer'
 
-const landingPage = (): React.ReactElement => {
+const ProductPage = (): React.ReactElement => {
     return (
     <div className='w-[100vw] mx-auto h-[100vh]'>
         <div className='static'>
@@ -21,4 +21,4 @@ const landingPage = (): React.ReactElement => {
     )
 }
 
-export default landingPage
+export default ProductPage

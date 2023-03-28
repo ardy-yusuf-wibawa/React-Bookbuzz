@@ -8,13 +8,14 @@ import SubscribeWrapper from '../components/subscribeWrapper'
 import CategoryWrapper from '../components/CategoryWrapper'
 import Footer from '../components/Footer'
 import FeaturedProductWrapper from '../components/featuredProductWrapper'
+import HeroContent from '../components/HeroContent'
 
 const landingPage = (): React.ReactElement => {
   return (
     <div className='w-[100vw] mx-auto h-[100vh]'>
       <div className='static'>
         <NavBar />
-        {/* herocontent */}
+        <HeroContent />
         <CategoryWrapper />
         <ProductContent />
         {/* review Wrapper */}

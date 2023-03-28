@@ -28,9 +28,9 @@ const contentData = ({
         </div>
         <div className='border border-[rgba(0,0,0,0.3)] pt-2 px-[10px] max-w-[248px] w-full '>
           <div className='flex justify-between'>
-            <a className='font-normal font-inter sm:text-[12px] text-[10px] text-[#000000]/60 leading-4'>
+            <span className='font-normal font-inter sm:text-[12px] text-[10px] text-[#000000]/60 leading-4'>
               {name}
-            </a>
+            </span>
             <div className='flex gap-[2.5px]'>
               {Array.from(Array(5), (_, i) => (
                 <svg
