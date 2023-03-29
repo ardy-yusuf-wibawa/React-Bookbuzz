@@ -1,6 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react'
-
 import { Link } from 'react-router-dom'
+
+interface sideBarProps {
+  items: { text: string; path: string }[]
+}
+
+const sideBar = [
+  { text: 'Sign Up', path: '/signup' },
+  { text: 'Login', path: '/login' },
+  { text: 'Home', path: '/' },
+  { text: 'Shop', path: '/shop' },
+  { text: 'About', path: '/about' },
+  { text: 'Contact', path: '/contact' }
+]
+
+function SideBarMenu({ items }: sideBarProps) {
+  return (
+    <li className='mb-1'>
+      {items.map((item, i) => (
+        <Link
+          to={item.path}
+          key={i}
+          className='block p-4 text-sm font-semibold text-red-400 hover:bg-red-50 hover:text-red-600 rounded'>
+          {item.text}
+        </Link>
+      ))}
+    </li>
+  )
+}
 
 const HamburgerBar = (): React.ReactElement => {
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -30,7 +57,7 @@ const HamburgerBar = (): React.ReactElement => {
   return (
     <div>
       <button
-        className='flex navbar-burger'
+        className='flex'
         onClick={handleToggle}
         ref={buttonRef}>
         <svg
@@ -49,8 +76,8 @@ const HamburgerBar = (): React.ReactElement => {
         </svg>
       </button>
       <div>
-        <div className={`navbar-menu relative  ${isOpen ? '' : 'hidden'}`}>
-          <div className='navbar-backdrop fixed inset-0 bg-slate-800 opacity-25'></div>
+        <div className={`relative  ${isOpen ? '' : 'hidden'}`}>
+          <div className='fixed inset-0 bg-slate-800 opacity-25'></div>
           <nav className='z-[9999] fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto'>
             <div className='flex items-center mb-8'>
               <Link
@@ -60,7 +87,7 @@ const HamburgerBar = (): React.ReactElement => {
               </Link>
 
               <button
-                className='navbar-close'
+                className=''
                 onClick={handleToggle}>
                 <svg
                   className='h-6 w-6 cursor-pointer text-rose-800'
@@ -79,52 +106,7 @@ const HamburgerBar = (): React.ReactElement => {
             <div>
               <ul>
                 <li className='mb-1'>
-                  <Link
-                    to='/signup'
-                    className='block p-4 text-sm font-semibold text-red-400
-                                  hover:bg-red-50 hover:text-red-600 rounded'>
-                    Sign Up
-                  </Link>
-                </li>
-                <li className='mb-1'>
-                  <Link
-                    to='/login'
-                    className='block p-4 text-sm font-semibold text-red-400
-                                  hover:bg-red-50 hover:text-red-600 rounded'>
-                    Login
-                  </Link>
-                </li>
-                <li className='mb-1'>
-                  <Link
-                    to='/'
-                    className='block p-4 text-sm font-semibold text-red-400
-                                  hover:bg-red-50 hover:text-red-600 rounded'>
-                    Home
-                  </Link>
-                </li>
-                <li className='mb-1'>
-                  <Link
-                    to='/'
-                    className='block p-4 text-sm font-semibold text-red-400
-                                  hover:bg-red-50 hover:text-red-600 rounded'>
-                    Shop
-                  </Link>
-                </li>
-                <li className='mb-1'>
-                  <Link
-                    to='/about'
-                    className='block p-4 text-sm font-semibold text-red-400
-                                  hover:bg-red-50 hover:text-red-600 rounded'>
-                    About
-                  </Link>
-                </li>
-                <li className='mb-1'>
-                  <Link
-                    to='/contact'
-                    className='block p-4 text-sm font-semibold text-red-400
-                                  hover:bg-red-50 hover:text-red-600 rounded'>
-                    Contact
-                  </Link>
+                  <SideBarMenu items={sideBar} />
                 </li>
               </ul>
             </div>

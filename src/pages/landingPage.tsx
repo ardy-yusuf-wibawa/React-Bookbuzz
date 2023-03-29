@@ -5,10 +5,10 @@ import BannerWrapper from '../components/bannerWrapper'
 import ProductWidget from '../components/productWidget'
 import ShippingDescWrapper from '../components/shippingDescWrapper'
 import SubscribeWrapper from '../components/subscribeWrapper'
-import CategoryWrapper from '../components/CategoryWrapper'
-import Footer from '../components/Footer'
+import CategoryWrapper from '../components/categoryWrapper'
+import Footer from '../components/footer'
 import FeaturedProductWrapper from '../components/featuredProductWrapper'
-import HeroContent from '../components/HeroContent'
+import HeroContent from '../components/heroContent'
 
 const landingPage = (): React.ReactElement => {
   return (

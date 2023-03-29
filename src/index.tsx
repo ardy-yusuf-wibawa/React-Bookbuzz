@@ -8,9 +8,9 @@ import {
 import LandingPage from './pages/landingPage'
 import SignUp from './pages/signUp'
 import LogIn from './pages/logIn'
-import ContactUs from './pages/ContactUs'
-import AboutUs from './pages/About'
-import ProductPage from './pages/ProductPage'
+import ContactUs from './pages/contactUs'
+import AboutUs from './pages/about'
+import ProductPage from './pages/productPage'
 
 const router = createBrowserRouter([
   {

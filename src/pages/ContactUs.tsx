@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/space-before-function-paren */
 import React from 'react'
 import NavBar from '../components/navBar'
-import Footer from '../components/Footer'
+import Footer from '../components/footer'
 
 function ContactUs(): JSX.Element {
   return (

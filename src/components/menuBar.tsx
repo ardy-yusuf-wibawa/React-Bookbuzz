@@ -2,28 +2,40 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '@fontsource/poppins'
 
-const nameBar = {
-  name: ['Home', 'Shop', 'About', 'Contact'],
-  path: ['/', '/', '/about', '/contact'],
-};
+interface nameBarProps {
+  items: { text: string; path: string }[]
+}
 
-function menuBar(): React.ReactElement {
+function NameBar({ items }: nameBarProps) {
+  return (
+    <ul
+      className='flex items-center relative text-[#131246] gap-5
+          font-poppins font-medium text-xs leading-6'>
+      {items.map((item, i) => (
+        <li key={i}>
+          <Link to={item.path}>{item.text}</Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+const nameBar = [
+  { text: 'Home', path: '/' },
+  { text: 'Shop', path: '/shop' },
+  { text: 'About', path: '/about' },
+  { text: 'Contact', path: '/contact' }
+]
+
+const menuBar = () =>  {
   return (
     <section className='flex items-center relative justify-center '>
       <button className='relative'>
-
-        <ul
-          className='flex items-center relative text-[#131246] gap-5
-          font-poppins font-medium text-xs leading-6'>
-            {nameBar.name.map((v,i) => (
-          <li key={i}>
-            <Link to={nameBar.path[i]}>{v}</Link>
-          </li>
-        ))}
-        </ul>
+        <NameBar items={nameBar} />
       </button>
     </section>
   )
 }
 
 export default menuBar
+{/* <ul className='flex items-center relative text-[#131246] gap-5 font-popp font-medium text-base leading-6'> */}
