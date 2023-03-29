@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 
 const AboutUs = (): React.ReactElement => {
   return (
-    <div className=''>
+    <div className='w-[100vw] mx-auto h-[100vh]'>
       <NavBar />
       {/* About Us */}
       <div className=' md:flex items-center justify-center'>

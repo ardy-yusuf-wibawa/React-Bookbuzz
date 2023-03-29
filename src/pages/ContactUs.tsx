@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 
 function ContactUs(): JSX.Element {
   return (
-    <>
+    <div className='w-[100vw] mx-auto h-[100vh]'>
       <NavBar />
       <section className='contact-section'>
         <div className='bg-[#f6f6f6] p-20'>
@@ -109,7 +109,7 @@ function ContactUs(): JSX.Element {
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   )
 }
 
