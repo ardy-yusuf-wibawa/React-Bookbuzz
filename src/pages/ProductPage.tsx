@@ -7,18 +7,16 @@ import FeaturedProductWrapper from '../components/featuredProductWrapper'
 import Footer from '../components/Footer'
 
 const ProductPage = (): React.ReactElement => {
-    return (
+  return (
     <div className='w-[100vw] mx-auto h-[100vh]'>
-        <div className='static'>
-        <NavBar />
-        <ProductWrapper />
-        <FeaturedProductWrapper />
-        <ShippingDescWrapper />
-        <SubscribeWrapper />
-        <Footer />
-        </div>
+      <NavBar />
+      <ProductWrapper />
+      <FeaturedProductWrapper />
+      <ShippingDescWrapper />
+      <SubscribeWrapper />
+      <Footer />
     </div>
-    )
+  )
 }
 
 export default ProductPage

@@ -2,25 +2,24 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '@fontsource/poppins'
 
+const nameBar = {
+  name: ['Home', 'Shop', 'About', 'Contact'],
+  path: ['/', '/', '/about', '/contact'],
+};
+
 function menuBar(): React.ReactElement {
   return (
     <section className='flex items-center relative justify-center '>
       <button className='relative'>
+
         <ul
           className='flex items-center relative text-[#131246] gap-5
           font-poppins font-medium text-xs leading-6'>
-          <li>
-            <Link to='index.html'>Home</Link>
+            {nameBar.name.map((v,i) => (
+          <li key={i}>
+            <Link to={nameBar.path[i]}>{v}</Link>
           </li>
-          <li>
-            <Link to='index.html'>Shop</Link>
-          </li>
-          <li>
-            <Link to='/login'>About</Link>
-          </li>
-          <li>
-            <Link to='/signup'>Contact</Link>
-          </li>
+        ))}
         </ul>
       </button>
     </section>
