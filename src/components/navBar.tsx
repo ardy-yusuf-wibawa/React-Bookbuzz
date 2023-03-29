@@ -4,17 +4,34 @@ import '@fontsource/montserrat-alternates/900-italic.css'
 import '@fontsource/poppins'
 import HamburgerBar from './lib/hamburgerBar'
 
-interface NameBar {
-  name: string[]
-  path: string[]
+interface nameBarProps {
+  items: { text: string; path: string }[]
 }
 
-function navBar(): React.ReactElement {
-  const nameBar: NameBar = {
-    name: ['Home', 'Shop', 'About', 'Contact'],
-    path: ['/', '/', '/about', '/contact']
-  }
+const nameBar = [
+  { text: 'Home', path: '/' },
+  { text: 'Shop', path: '/shop' },
+  { text: 'About', path: '/about' },
+  { text: 'Contact', path: '/contact' }
+]
 
+function NameBar({ items }: nameBarProps) {
+  return (
+    <ul
+      className='flex items-center relative text-[#131246] gap-5
+          font-poppins font-medium text-base leading-6'>
+      {items.map((item, i) => (
+        <li
+          key={i}
+          className='hidden sm:block'>
+          <Link to={item.path}>{item.text}</Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+const navBar = () => {
   return (
     <section className='flex flex-row w-[100%] sm:h-[100px] justify-between items-center top-0 sm:px-[10px] z-[9999] bg-[#f6f6f6]'>
       <div className='mt-[5px] relative flex left-[10px] sm:left-[24px] items-start self-start w-[85px] h-[85px] sm:w-[90px] sm:h-[90px] pl-[15px] sm:pl-[20px] rounded-full bg-gradient-to-bl from-[#6a79ff] to-[#fb4e97] drop-shadow-[0_1px_3px_rgba(16,24,40,0.1)]'>
@@ -33,21 +50,12 @@ function navBar(): React.ReactElement {
       {/* --model baru -- end */}
 
       <div className='flex gap-[12px] sm:pr-5 pr-10'>
-        {nameBar.name.map((v, i) => (
-          <div
-            className='flex items-center relative justify-center'
-            key={i}>
-            <button className='relative'>
-              <ul className='flex items-center relative text-[#131246] gap-5 font-popp font-medium text-base leading-6'>
-                <li
-                  className='hidden sm:block'
-                  key={`${v}${i}`}>
-                  <Link to={nameBar.path[i]}>{v}</Link>
-                </li>
-              </ul>
-            </button>
-          </div>
-        ))}
+        <div className='flex items-center relative justify-center'>
+          <button className='relative'>
+            <NameBar items={nameBar} />
+          </button>
+        </div>
+
         <div className='flex pl-4 gap-3'>
           <Link
             to='#'

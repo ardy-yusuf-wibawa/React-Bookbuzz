@@ -4,7 +4,7 @@ import ProductWrapper from '../components/ProductWrapper'
 import ShippingDescWrapper from '../components/shippingDescWrapper'
 import SubscribeWrapper from '../components/subscribeWrapper'
 import FeaturedProductWrapper from '../components/featuredProductWrapper'
-import Footer from '../components/Footer'
+import Footer from '../components/footer'
 
 const ProductPage = (): React.ReactElement => {
   return (
