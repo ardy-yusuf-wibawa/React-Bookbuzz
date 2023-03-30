@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 import '@fontsource/poppins'
 
 interface nameBarProps {
-  items: { text: string; path: string }[]
+  items: Array<{
+    text: string
+    path: string
+  }>
 }
 
 function NameBar({ items }: nameBarProps) {
@@ -27,7 +30,7 @@ const nameBar = [
   { text: 'Contact', path: '/contact' }
 ]
 
-const MenuBar = () => {
+const MenuBar = (): React.ReactElement => {
   return (
     <section className='flex items-center relative justify-center '>
       <button className='relative'>
@@ -38,6 +41,3 @@ const MenuBar = () => {
 }
 
 export default MenuBar
-{
-  /* <ul className='flex items-center relative text-[#131246] gap-5 font-popp font-medium text-base leading-6'> */
-}

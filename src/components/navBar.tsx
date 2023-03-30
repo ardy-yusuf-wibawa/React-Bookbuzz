@@ -5,7 +5,10 @@ import '@fontsource/poppins'
 import HamburgerBar from './lib/hamburgerBar'
 
 interface nameBarProps {
-  items: { text: string; path: string }[]
+  items: Array<{
+    text: string
+    path: string
+  }>
 }
 
 const nameBar = [
@@ -31,23 +34,14 @@ function NameBar({ items }: nameBarProps) {
   )
 }
 
-const Navbar = () => {
+const Navbar = (): React.ReactElement => {
   return (
-    <section className='flex flex-row w-[100%] sm:h-[100px] justify-between items-center top-0 sm:px-[10px] z-[9999] bg-[#f6f6f6]'>
-      <div className='mt-[5px] relative flex left-[10px] sm:left-[24px] items-start self-start w-[85px] h-[85px] sm:w-[90px] sm:h-[90px] pl-[15px] sm:pl-[20px] rounded-full bg-gradient-to-bl from-[#6a79ff] to-[#fb4e97] drop-shadow-[0_1px_3px_rgba(16,24,40,0.1)]'>
-        <div className='left-[23px] relative items-center self-center font-poppins font-bold text-[32px] leading-[48px] tracking-[.075em]'>
-          BOOKBUZZ
-        </div>
-      </div>
-
-      {/* --model baru--start */}
-      {/* <section className='flex flex-row w-[100%] h-[100px] justify-between items-center top-0 px-[16px] sm:px-[80px] z-[9999] bg-[#f6f6f6]'>
+    <section className='flex flex-row w-[100%] h-[100px] justify-between items-center top-0 px-[16px] sm:px-[80px] z-[9999] bg-[#f6f6f6]'>
       <div className='relative flex pt-[16px] sm:pt-[20px] top-[14.5px] left-[24px] items-start self-start '>
         <span className='font-black capitalize font-montserrat text-[16px] sm:text-[36px] leading-[44px] tracking-[.075em] italic font-feature-settings-tnum-onum-ordn-ss02-ss03-ss04-salt-ss01'>
-        BOOKBUZZ.
+          BOOKBUZZ.
         </span>
-      </div> */}
-      {/* --model baru -- end */}
+      </div>
 
       <div className='flex gap-[12px] sm:pr-5 pr-10'>
         <div className='flex items-center relative justify-center'>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const shippingDescWrapper = () => {
+const shippingDescWrapper = (): React.ReactElement => {
   return (
     <div
       className=' max-w-7xl mx-auto px-[100px] py-[50px] border-b-2'

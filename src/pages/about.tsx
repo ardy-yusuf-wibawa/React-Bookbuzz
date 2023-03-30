@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/navBar'
 import Footer from '../components/footer'
 
-const aboutUs = () => {
+const aboutUs = (): React.ReactElement => {
   return (
     <div className='w-[100vw] mx-auto h-[100vh]'>
       <Navbar />

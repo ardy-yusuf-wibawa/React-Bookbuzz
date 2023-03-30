@@ -13,7 +13,7 @@ const ProductPage = (): React.ReactElement => {
       <ProductWrapper />
       <FeaturedProductWrapper />
       <ShippingDescWrapper />
-      <SubscribeWrapper />  
+      <SubscribeWrapper />
       <Footer />
     </div>
   )

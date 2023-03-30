@@ -9,8 +9,9 @@ import CategoryWrapper from '../components/categoryWrapper'
 import Footer from '../components/footer'
 import FeaturedProductWrapper from '../components/featuredProductWrapper'
 import HeroContent from '../components/heroContent'
+import ReviewWrapper from '../components/reviewWrapper'
 
-const landingPage = () => {
+const landingPage = (): React.ReactElement => {
   return (
     <div className='w-[100vw] mx-auto h-[100vh]'>
       <div className='static'>
@@ -18,7 +19,7 @@ const landingPage = () => {
         <HeroContent />
         <CategoryWrapper />
         <ProductContent />
-        {/* review Wrapper */}
+        <ReviewWrapper />
         <FeaturedProductWrapper />
         <BannerWrapper />
         <ProductWidget />
