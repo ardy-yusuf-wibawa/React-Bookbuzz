@@ -1,19 +1,16 @@
 import React, { useState } from 'react'
 import '@fontsource/poppins'
 import '@fontsource/inter'
-import Data from '../Data.json'
+import Data from '../data.json'
 import ContentData from './lib/contentData'
 import Pagination from './lib/pagination'
 import { Link } from 'react-router-dom'
 
-function productContent(): React.ReactElement {
-  const [currentPage, setCurrentPage] =
-    useState(1)
+function productContent (): JSX.Element {
+  const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 8
 
-  const handlePageChange = (
-    pageNumber: number
-  ): void => {
+  const handlePageChange = (pageNumber: number): void => {
     setCurrentPage(pageNumber)
   }
 
@@ -25,13 +22,10 @@ function productContent(): React.ReactElement {
     setCurrentPage((prevPage) => prevPage + 1)
   }
 
-  const startIndex =
-    (currentPage - 1) * itemsPerPage
+  const startIndex = (currentPage - 1) * itemsPerPage
   const endIndex = startIndex + itemsPerPage
 
-  const totalPages = Math.ceil(
-    Data.length / itemsPerPage
-  )
+  const totalPages = Math.ceil(Data.length / itemsPerPage)
 
   return (
     <>
@@ -47,9 +41,8 @@ function productContent(): React.ReactElement {
       <span
         className='flex justify-center font-inter text-[14px] text-center p-2
         leading-[17px] text-slate-900/50'>
-        Mirum est notare quam littera gothica,
-        quam nunc putamus parum claram
-        anteposuerit litterarum formas.
+        Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit
+        litterarum formas.
       </span>
       {/* menubar */}
       <section className='flex items-center relative justify-center '>
@@ -114,9 +107,7 @@ function productContent(): React.ReactElement {
              bg-white rounded-full shadow-[0_2px_5px_-0px_rgba(0,0,0,0.3)]
               absolute top-[50%] w-[42px] h-[42px] -right-[0.8vw]'
               onClick={handleNext}
-              disabled={
-                currentPage === totalPages
-              }>
+              disabled={currentPage === totalPages}>
               <svg
                 stroke='currentColor'
                 fill='currentColor'
@@ -132,26 +123,22 @@ function productContent(): React.ReactElement {
           </div>
         </div>
         <Link to='/product'>
-        <div className='container mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-4 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
-          {Data.slice(startIndex, endIndex).map(
-            (value, index) => {
+          <div className='container mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-4 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
+            {Data.slice(startIndex, endIndex).map((value, index) => {
               return (
                 <ContentData
-                key={index}
-                name={value.name}
-                img={value.img}
-                rating={value.rating}
-                nameProduct={value.nameProduct}
-                price={value.price}
-                discountPrice={
-                  value.discountPrice
-                }
+                  key={index}
+                  name={value.name}
+                  img={value.img}
+                  rating={value.rating}
+                  nameProduct={value.nameProduct}
+                  price={value.price}
+                  discountPrice={value.discountPrice}
                 />
-                )
-              }
-              )}
-        </div>
-              </Link>
+              )
+            })}
+          </div>
+        </Link>
       </section>
       <div className='pt-[120px] md:pt-[50px] items-center justify-center flex'>
         <Pagination

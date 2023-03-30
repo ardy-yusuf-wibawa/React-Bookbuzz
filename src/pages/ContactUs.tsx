@@ -3,28 +3,21 @@ import React from 'react'
 import NavBar from '../components/navBar'
 import Footer from '../components/footer'
 
-function ContactUs(): JSX.Element {
+function ContactUs() {
   return (
     <div className='w-[100vw] mx-auto h-[100vh]'>
       <NavBar />
       <section className='contact-section'>
         <div className='bg-[#f6f6f6] p-20'>
-          <div className='text-4xl text-slate-900 text-center font-bold mt-4'>
-            Contact Us
-          </div>
+          <div className='text-4xl text-slate-900 text-center font-bold mt-4'>Contact Us</div>
           <div className='text-center mt-2'>
-            Home -{' '}
-            <span className='text-sky-600 hover:underline cursor-pointer'>
-              Contact Us
-            </span>
+            Home - <span className='text-sky-600 hover:underline cursor-pointer'>Contact Us</span>
           </div>
         </div>
 
         <div className='container px-6 mx-auto max-w-md sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full'>
           <div className='lg:p-12 lg:flex-1'>
-            <div className='text-2xl font-bold mb-6'>
-              Tell us your message
-            </div>
+            <div className='text-2xl font-bold mb-6'>Tell us your message</div>
             <form action=''>
               <label htmlFor='username'>
                 <span>Your Name*</span>
@@ -78,32 +71,16 @@ function ContactUs(): JSX.Element {
 
           <div className='mt-10 font-sans text-center font-semibold text-md lg:flex lg:flex-1 flex-wrap lg:p-6'>
             <div className='lg:m-auto'>
-              <h1 className='mb-7 text-xl'>
-                contact us
-              </h1>
+              <h1 className='mb-7 text-xl'>contact us</h1>
               <p className='mb-7'>
-                Lorem ipsum dolor sit amet
-                consectetur adipisicing elit.
-                Ipsam consequuntur laudantium esse
-                culpa eveniet ratione soluta
-                pariatur repudiandae asperiores
-                veniam, nesciunt iure et
-                exercitationem, nisi aliquam?
-                Tempore optio dicta reiciendis
-                quas, officiis ducimus accusantium
-                facilis perspiciatis eius officia
-                tenetur nihil dolores veritatis
-                necessitatibus repellendus sunt
-                deserunt! Odit vel tempora
-                accusantium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam consequuntur
+                laudantium esse culpa eveniet ratione soluta pariatur repudiandae asperiores veniam,
+                nesciunt iure et exercitationem, nisi aliquam? Tempore optio dicta reiciendis quas,
+                officiis ducimus accusantium facilis perspiciatis eius officia tenetur nihil dolores
+                veritatis necessitatibus repellendus sunt deserunt! Odit vel tempora accusantium.
               </p>
-              <h3 className='mb-7 text-xl'>
-                Address
-              </h3>
-              <h3>
-                123 Main Street, Anytown, CA 12345
-                - USA
-              </h3>
+              <h3 className='mb-7 text-xl'>Address</h3>
+              <h3>123 Main Street, Anytown, CA 12345 - USA</h3>
             </div>
           </div>
         </div>

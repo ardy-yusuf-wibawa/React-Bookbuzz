@@ -6,19 +6,10 @@ interface Props {
   onPageChange: (pageNumber: number) => void
 }
 
-function Pagination({
-  currentPage,
-  totalPages,
-  onPageChange
-}: Props): React.ReactElement {
-  const pageNumbers = Array.from(
-    { length: totalPages },
-    (_, i) => i + 1
-  )
+function Pagination({ currentPage, totalPages, onPageChange }: Props) {
+  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1)
 
-  const handlePageClick = (
-    pageNumber: number
-  ): void => {
+  const handlePageClick = (pageNumber: number): void => {
     onPageChange(pageNumber)
   }
 
