@@ -1,6 +1,6 @@
 import React from 'react'
 
-const productWidget = (): React.ReactElement => {
+const productWidget = () => {
   return (
     <div
       className='container justify-center items-center relative flex flex-wrap lg:grid lg:grid-cols-3 gap-y-4 gap-x-4 mx-auto px-6 font:poppins
@@ -13,15 +13,9 @@ const productWidget = (): React.ReactElement => {
           alt=''
         />
         <div className='float-right px-8 py-4 mx-2'>
-          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>
-            Vendor 01
-          </div>
-          <p className='text-sm py-2'>
-            1.Product With Video
-          </p>
-          <p className='font-bold color text-[#0085FF]'>
-            $20.00
-          </p>
+          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>Vendor 01</div>
+          <p className='text-sm py-2'>1.Product With Video</p>
+          <p className='font-bold color text-[#0085FF]'>$20.00</p>
         </div>
       </div>
       {/* 2 */}
@@ -32,15 +26,9 @@ const productWidget = (): React.ReactElement => {
           alt=''
         />
         <div className='float-right px-8 py-4 mx-2'>
-          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>
-            Vendor 01
-          </div>
-          <p className='text-sm py-2'>
-            1.Product With Video
-          </p>
-          <p className='font-bold color text-[#0085FF]'>
-            $20.00
-          </p>
+          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>Vendor 01</div>
+          <p className='text-sm py-2'>1.Product With Video</p>
+          <p className='font-bold color text-[#0085FF]'>$20.00</p>
         </div>
       </div>
       {/* 3 */}
@@ -51,15 +39,9 @@ const productWidget = (): React.ReactElement => {
           alt=''
         />
         <div className='float-right px-8 py-4 mx-2'>
-          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>
-            Vendor 01
-          </div>
-          <p className='text-sm py-2'>
-            1.Product With Video
-          </p>
-          <p className='font-bold color text-[#0085FF]'>
-            $20.00
-          </p>
+          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>Vendor 01</div>
+          <p className='text-sm py-2'>1.Product With Video</p>
+          <p className='font-bold color text-[#0085FF]'>$20.00</p>
         </div>
       </div>
       {/* 4 */}
@@ -70,15 +52,9 @@ const productWidget = (): React.ReactElement => {
           alt=''
         />
         <div className='float-right px-8 py-4 mx-2'>
-          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>
-            Vendor 01
-          </div>
-          <p className='text-sm py-2'>
-            1.Product With Video
-          </p>
-          <p className='font-bold color text-[#0085FF]'>
-            $20.00
-          </p>
+          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>Vendor 01</div>
+          <p className='text-sm py-2'>1.Product With Video</p>
+          <p className='font-bold color text-[#0085FF]'>$20.00</p>
         </div>
       </div>
       {/* 5 */}
@@ -89,15 +65,9 @@ const productWidget = (): React.ReactElement => {
           alt=''
         />
         <div className='float-right px-8 py-4 mx-2'>
-          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>
-            Vendor 01
-          </div>
-          <p className='text-sm py-2'>
-            1.Product With Video
-          </p>
-          <p className='font-bold color text-[#0085FF]'>
-            $20.00
-          </p>
+          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>Vendor 01</div>
+          <p className='text-sm py-2'>1.Product With Video</p>
+          <p className='font-bold color text-[#0085FF]'>$20.00</p>
         </div>
       </div>
       {/* 6 */}
@@ -108,15 +78,9 @@ const productWidget = (): React.ReactElement => {
           alt=''
         />
         <div className='float-right px-8 py-4 mx-2'>
-          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>
-            Vendor 01
-          </div>
-          <p className='text-sm py-2'>
-            1.Product With Video
-          </p>
-          <p className='font-bold color text-[#0085FF]'>
-            $20.00
-          </p>
+          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>Vendor 01</div>
+          <p className='text-sm py-2'>1.Product With Video</p>
+          <p className='font-bold color text-[#0085FF]'>$20.00</p>
         </div>
       </div>
       {/* 7 */}
@@ -127,15 +91,9 @@ const productWidget = (): React.ReactElement => {
           alt=''
         />
         <div className='float-right px-8 py-4 mx-2'>
-          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>
-            Vendor 01
-          </div>
-          <p className='text-sm py-2'>
-            1.Product With Video
-          </p>
-          <p className='font-bold color text-[#0085FF]'>
-            $20.00
-          </p>
+          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>Vendor 01</div>
+          <p className='text-sm py-2'>1.Product With Video</p>
+          <p className='font-bold color text-[#0085FF]'>$20.00</p>
         </div>
       </div>
       {/* 8 */}
@@ -146,15 +104,9 @@ const productWidget = (): React.ReactElement => {
           alt=''
         />
         <div className='float-right px-8 py-4 mx-2'>
-          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>
-            Vendor 01
-          </div>
-          <p className='text-sm py-2'>
-            1.Product With Video
-          </p>
-          <p className='font-bold color text-[#0085FF]'>
-            $20.00
-          </p>
+          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>Vendor 01</div>
+          <p className='text-sm py-2'>1.Product With Video</p>
+          <p className='font-bold color text-[#0085FF]'>$20.00</p>
         </div>
       </div>
       {/* 9 */}
@@ -165,15 +117,9 @@ const productWidget = (): React.ReactElement => {
           alt=''
         />
         <div className='float-right px-8 py-4 mx-2'>
-          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>
-            Vendor 01
-          </div>
-          <p className='text-sm py-2'>
-            1.Product With Video
-          </p>
-          <p className='font-bold color text-[#0085FF]'>
-            $20.00
-          </p>
+          <div className='font-normal leading-5 text-sm flex pr-8 text-gray-600'>Vendor 01</div>
+          <p className='text-sm py-2'>1.Product With Video</p>
+          <p className='font-bold color text-[#0085FF]'>$20.00</p>
         </div>
       </div>
     </div>
