@@ -3,7 +3,7 @@ import React from 'react'
 import NavBar from '../components/navBar'
 import Footer from '../components/footer'
 
-function ContactUs() {
+function ContactUs(): React.ReactElement {
   return (
     <div className='w-[100vw] mx-auto h-[100vh]'>
       <NavBar />

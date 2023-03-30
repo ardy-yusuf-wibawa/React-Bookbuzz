@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BannerWrapper = () => {
+const BannerWrapper = (): React.ReactElement => {
   return (
     <div className='container mx-auto px-6 font-inter sm:flex justify-center items-center sm:gap-4'>
       <div className='rounded shadow-lg mb-10 sm:w[526px] h[300px] justify-center'>

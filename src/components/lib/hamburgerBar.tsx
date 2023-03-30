@@ -2,7 +2,10 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 interface sideBarProps {
-  items: { text: string; path: string }[]
+  items: Array<{
+    text: string
+    path: string
+  }>
 }
 
 const sideBar = [

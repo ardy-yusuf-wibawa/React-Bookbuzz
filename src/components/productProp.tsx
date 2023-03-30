@@ -7,7 +7,7 @@ export interface ProductProps {
   price: string
 }
 
-const ProductProp = ({ name, category, img, star, price }: ProductProps) => {
+const ProductProp = ({ name, category, img, star, price }: ProductProps): React.ReactElement => {
   return (
     <>
       <div className='mx-auto'>

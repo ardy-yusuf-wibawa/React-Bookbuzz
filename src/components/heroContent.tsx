@@ -1,9 +1,9 @@
 import React from 'react'
 
-const heroContent = () => {
+const heroContent = (): React.ReactElement => {
   return (
     <>
-      {/*item1*/}
+      {/* item1 */}
       <div
         className='h-[750px] items-center flex bg-no-repeat bg-cover bg-right'
         id='hero-content'

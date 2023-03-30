@@ -9,7 +9,7 @@ interface ProductProps {
   discountPrice?: number
 }
 
-const StarIcon = ({ filled }: { filled: boolean }) => (
+const StarIcon = ({ filled }: { filled: boolean }): JSX.Element => (
   <svg
     stroke='#DFB300'
     fill={filled ? '#DFB300' : '#5F5F5F'}
@@ -22,7 +22,7 @@ const StarIcon = ({ filled }: { filled: boolean }) => (
   </svg>
 )
 
-const Rating = ({ rating }: { rating: number }) => (
+const Rating = ({ rating }: { rating: number }): JSX.Element => (
   <div className='flex gap-[2.5px]'>
     {Array.from(Array(5), (_, i) => (
       <StarIcon
@@ -33,7 +33,13 @@ const Rating = ({ rating }: { rating: number }) => (
   </div>
 )
 
-const Price = ({ price, discountPrice }: { price: number; discountPrice?: number }) => (
+const Price = ({
+  price,
+  discountPrice
+}: {
+  price: number
+  discountPrice?: number
+}): JSX.Element => (
   <div className='py-1 gap-[55px] flex'>
     <span className='font-bold font-inter sm:text-[14px] text-[10px] leading-4 text-[#0085FF]'>
       ${price}
