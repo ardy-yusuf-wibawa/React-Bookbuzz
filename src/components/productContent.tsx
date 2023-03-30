@@ -6,7 +6,7 @@ import ContentData from './lib/contentData'
 import Pagination from './lib/pagination'
 import { Link } from 'react-router-dom'
 
-function ProductContent(): React.ReactElement {
+function productContent(): React.ReactElement {
   const [currentPage, setCurrentPage] =
     useState(1)
   const itemsPerPage = 8
@@ -164,4 +164,4 @@ function ProductContent(): React.ReactElement {
   )
 }
 
-export default ProductContent
+export default productContent

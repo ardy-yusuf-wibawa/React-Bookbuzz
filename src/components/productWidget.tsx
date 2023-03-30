@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProductWidget = (): React.ReactElement => {
+const productWidget = (): React.ReactElement => {
   return (
     <div
       className='container justify-center items-center relative flex flex-wrap lg:grid lg:grid-cols-3 gap-y-4 gap-x-4 mx-auto px-6 font:poppins
@@ -181,4 +181,4 @@ const ProductWidget = (): React.ReactElement => {
   )
 }
 
-export default ProductWidget
+export default productWidget

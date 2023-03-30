@@ -31,7 +31,7 @@ function NameBar({ items }: nameBarProps) {
   )
 }
 
-const navBar = () => {
+const Navbar = () => {
   return (
     <section className='flex flex-row w-[100%] sm:h-[100px] justify-between items-center top-0 sm:px-[10px] z-[9999] bg-[#f6f6f6]'>
       <div className='mt-[5px] relative flex left-[10px] sm:left-[24px] items-start self-start w-[85px] h-[85px] sm:w-[90px] sm:h-[90px] pl-[15px] sm:pl-[20px] rounded-full bg-gradient-to-bl from-[#6a79ff] to-[#fb4e97] drop-shadow-[0_1px_3px_rgba(16,24,40,0.1)]'>
@@ -92,4 +92,4 @@ const navBar = () => {
   )
 }
 
-export default navBar
+export default Navbar

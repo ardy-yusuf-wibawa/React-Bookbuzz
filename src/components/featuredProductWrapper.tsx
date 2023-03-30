@@ -1,9 +1,9 @@
-import Product from './product'
+import ProductProp from './productProp'
 import List from '../list.json'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const FeaturedProductWrapper =
+const featuredProductWrapper =
   (): React.ReactElement => {
     return (
       <>
@@ -21,13 +21,14 @@ const FeaturedProductWrapper =
         <div className='flex flex-wrap gap-[30px] mx-[179px] mb-[106px] items-center justify-center '>
           {List.map((v, i) => {
             return (
-              <Product
+              <ProductProp
               key={i}
               name={v.name}
               category={v.category}
               price={v.price}
               img={v.img}
               star={v.star}
+            
               />
               )
             })}
@@ -37,4 +38,4 @@ const FeaturedProductWrapper =
     )
   }
 
-export default FeaturedProductWrapper
+export default featuredProductWrapper

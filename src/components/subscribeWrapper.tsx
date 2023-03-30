@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SubscribeWrapper =
+const subscribeWrapper =
   (): React.ReactElement => {
     return (
       <div
@@ -39,4 +39,4 @@ const SubscribeWrapper =
     )
   }
 
-export default SubscribeWrapper
+export default subscribeWrapper

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShippingDescWrapper =
+const shippingDescWrapper =
   (): React.ReactElement => {
     return (
       <div
@@ -51,4 +51,4 @@ const ShippingDescWrapper =
     )
   }
 
-export default ShippingDescWrapper
+export default shippingDescWrapper
