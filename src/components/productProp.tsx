@@ -7,7 +7,7 @@ export interface ProductProps {
   price: string
 }
 
-const Product = ({
+const ProductProp = ({
   name,
   category,
   img,
@@ -62,4 +62,4 @@ const Product = ({
   )
 }
 
-export default Product
+export default ProductProp

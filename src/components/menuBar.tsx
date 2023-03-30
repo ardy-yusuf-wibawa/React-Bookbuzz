@@ -27,7 +27,7 @@ const nameBar = [
   { text: 'Contact', path: '/contact' }
 ]
 
-const menuBar = () =>  {
+const MenuBar = () =>  {
   return (
     <section className='flex items-center relative justify-center '>
       <button className='relative'>
@@ -37,5 +37,5 @@ const menuBar = () =>  {
   )
 }
 
-export default menuBar
+export default MenuBar
 {/* <ul className='flex items-center relative text-[#131246] gap-5 font-popp font-medium text-base leading-6'> */}

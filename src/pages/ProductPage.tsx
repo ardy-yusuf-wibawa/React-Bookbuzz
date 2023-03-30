@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '../components/navBar'
-import ProductWrapper from '../components/ProductWrapper'
+import ProductWrapper from '../components/productWrapper'
 import ShippingDescWrapper from '../components/shippingDescWrapper'
 import SubscribeWrapper from '../components/subscribeWrapper'
 import FeaturedProductWrapper from '../components/featuredProductWrapper'

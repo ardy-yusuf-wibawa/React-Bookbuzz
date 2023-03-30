@@ -2,7 +2,7 @@ import React from 'react'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
-const ProductWrapper = (): React.ReactElement => {
+const productWrapper = (): React.ReactElement => {
   return (
 <div>
     <div className="flex items-center justify-center mb-[50px]">
@@ -137,4 +137,4 @@ const ProductWrapper = (): React.ReactElement => {
   )
 }
 
-export default ProductWrapper
+export default productWrapper

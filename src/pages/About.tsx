@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBar from '../components/navBar'
+import Navbar from '../components/navBar'
 import Footer from '../components/footer'
 
-const AboutUs = (): React.ReactElement => {
+const aboutUs = (): React.ReactElement => {
   return (
     <div className='w-[100vw] mx-auto h-[100vh]'>
-      <NavBar />
+      <Navbar />
       {/* About Us */}
       <div className=' md:flex items-center justify-center'>
         <div className='flex flex-col items-center justify-center w-full h-[273px] p-[] bg-[#F6F6F6]'>
@@ -115,9 +115,9 @@ const AboutUs = (): React.ReactElement => {
           quarta decima et quinta decima.
         </p>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
 
-export default AboutUs
+export default aboutUs 
