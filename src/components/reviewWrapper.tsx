@@ -9,6 +9,8 @@ interface reviewListProps {
   }>
 }
 
+const intervalTime = 1000 // set interval time
+
 const reviewList = [
   {
     src: './1.png',
@@ -46,6 +48,10 @@ function Review({ items }: reviewListProps): JSX.Element {
           <span className='font-inter font-normal text-xs text-center items-center justify-center'>
             {item.text}
           </span>
+          <img
+            src='./iconTestimoni.png'
+            alt=''
+          />
           <span className='font-inter font-semibold text-xs text-center items-center justify-center tracking-[.3em]'>
             {item.name}
           </span>
@@ -59,22 +65,21 @@ const ReviewWrapper = (): React.ReactElement => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   useEffect(() => {
-    // change slide every 5 seconds
     const intervalId = setInterval(() => {
       setCurrentSlide((currentSlide) =>
         currentSlide === reviewList.length - 1 ? 0 : currentSlide + 1
       )
-    }, 2000)
+    }, intervalTime)
     return () => {
       clearInterval(intervalId)
     }
   }, [])
 
   return (
-    <div className='py-[200px]'>
+    <div className='pt-[100px]'>
       <div
         style={{
-          backgroundImage: 'url(./bannerReview.jpg)',
+          backgroundImage: 'url(./bannerReview.png)',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover'
         }}
