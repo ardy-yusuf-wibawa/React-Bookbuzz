@@ -21,8 +21,8 @@ const nameBar = [
 function NameBar({ items }: nameBarProps) {
   return (
     <ul
-      className='flex items-center relative text-[#131246] gap-5
-          font-poppins font-medium text-base leading-6'>
+      className='flex items-center relative text-[#131246] gap-8
+          font-poppins font-medium text-base'>
       {items.map((item, i) => (
         <li
           key={i}
@@ -36,21 +36,22 @@ function NameBar({ items }: nameBarProps) {
 
 const Navbar = (): React.ReactElement => {
   return (
-    <section className='flex flex-row w-[100%] h-[100px] justify-between items-center top-0 px-[16px] sm:px-[80px] z-[9999] bg-[#f6f6f6]'>
-      <div className='relative flex pt-[16px] sm:pt-[20px] top-[14.5px] left-[24px] items-start self-start '>
-        <span className='font-black capitalize font-montserrat text-[16px] sm:text-[36px] leading-[44px] tracking-[.075em] italic font-feature-settings-tnum-onum-ordn-ss02-ss03-ss04-salt-ss01'>
+    <nav className='bg-[#f6f6f6]'>
+    <div className='max-w-7xl mx-auto flex justify-between items-center  md:h-[90px]'>
+      <div className='justify-start flex sm:pt-[20px] items-start self-start '>
+        <p className='font-black capitalize font-montserrat text-[16px] sm:text-[36px] leading-[44px] tracking-[.075em] italic font-feature-settings-tnum-onum-ordn-ss02-ss03-ss04-salt-ss01'>
           BOOKBUZZ.
-        </span>
+        </p>
       </div>
 
-      <div className='flex gap-[12px] sm:pr-5 pr-10'>
+      <div className='flex gap-10'>
         <div className='flex items-center relative justify-center'>
           <button className='relative'>
             <NameBar items={nameBar} />
           </button>
         </div>
 
-        <div className='flex pl-4 gap-3'>
+        <div className='flex pl-4 gap-6'>
           <Link
             to='#'
             id='search'
@@ -82,7 +83,8 @@ const Navbar = (): React.ReactElement => {
           <HamburgerBar />
         </div>
       </div>
-    </section>
+    </div>
+    </nav>
   )
 }
 
