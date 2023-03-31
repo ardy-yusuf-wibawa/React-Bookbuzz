@@ -81,12 +81,14 @@ const HamburgerBar = (): React.ReactElement => {
       <div>
         <div className={`relative  ${isOpen ? '' : 'hidden'}`}>
           <div className='fixed inset-0 bg-slate-800 opacity-25'></div>
-          <nav className='z-[9999] fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto'>
+          <nav className='z-[9999] fixed top-0 right-0 bottom-0 flex flex-col w-1/4 max-w-sm py-6 px-2 bg-white border-r overflow-y-auto'>
             <div className='flex items-center mb-8'>
               <Link
                 to='#'
-                className='mr-auto'>
-                <span>BOOKBUZZ</span>
+                className='mx-auto'>
+                <p className='font-black capitalize font-montserrat text-[24px] sm:text-[24px] italic font-feature-settings-tnum-onum-ordn-ss02-ss03-ss04-salt-ss01'>
+          BOOKBUZZ.
+        </p>
               </Link>
 
               <button
@@ -107,8 +109,8 @@ const HamburgerBar = (): React.ReactElement => {
               </button>
             </div>
             <div>
-              <ul>
-                <li className='mb-1'>
+              <ul className='flex mx-auto justify-center text-center'>
+                <li className='mb-1 '>
                   <SideBarMenu items={sideBar} />
                 </li>
               </ul>
