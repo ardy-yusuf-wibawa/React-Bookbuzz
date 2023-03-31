@@ -19,16 +19,18 @@ const sideBar = [
 
 function SideBarMenu({ items }: sideBarProps) {
   return (
-    <li className='mb-1'>
-      {items.map((item, i) => (
-        <Link
-          to={item.path}
-          key={i}
-          className='block p-4 text-sm font-semibold text-red-400 hover:bg-red-50 hover:text-red-600 rounded'>
-          {item.text}
-        </Link>
-      ))}
-    </li>
+    <ul>
+      <li className='mb-1'>
+        {items.map((item, i) => (
+          <Link
+            to={item.path}
+            key={i}
+            className='block p-4 text-sm font-semibold text-red-400 hover:bg-red-50 hover:text-red-600 rounded'>
+            {item.text}
+          </Link>
+        ))}
+      </li>
+    </ul>
   )
 }
 
@@ -107,11 +109,7 @@ const HamburgerBar = (): React.ReactElement => {
               </button>
             </div>
             <div>
-              <ul>
-                <li className='mb-1'>
-                  <SideBarMenu items={sideBar} />
-                </li>
-              </ul>
+              <SideBarMenu items={sideBar} />
             </div>
           </nav>
         </div>
