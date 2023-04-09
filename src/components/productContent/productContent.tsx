@@ -1,11 +1,44 @@
 import React, { useState } from 'react'
 import '@fontsource/poppins'
 import '@fontsource/inter'
-import Data from '../data.json'
-import ContentData from './lib/contentData'
-import Pagination from './lib/pagination'
+import Data from '../../data.json'
+import ContentData from '../lib/contentData'
+import Pagination from './pagination'
 import { Link } from 'react-router-dom'
 
+interface GenreBook {
+  items: Array<{
+    genre: string
+    src: string
+  }>
+}
+
+const bookGenre = [
+  { genre: 'Adventure', src: '#' },
+  { genre: 'Novel', src: '#' },
+  { genre: 'Sci-fi', src: '#' },
+  { genre: 'Self-Help', src: '#' }
+]
+
+function BookGenreMenu({ items }: GenreBook) {
+  return (
+    <>
+      {items.map((item) => (
+        <ul
+          className=''
+          key={item.src}>
+          <li className='rounded-sm text-slate-900/50 bg-slate-500/20'>
+            <Link
+              to={item.src}
+              className='font-inter text-[14px] leading-[17px]'>
+              {item.genre}
+            </Link>
+          </li>
+        </ul>
+      ))}
+    </>
+  )
+}
 function ProductContent(): JSX.Element {
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 8
@@ -47,36 +80,9 @@ function ProductContent(): JSX.Element {
       {/* menubar */}
       <section className='flex items-center relative justify-center '>
         <button className='relative'>
-          <ul className='flex items-center relative gap-3'>
-            <li className='rounded-sm text-slate-900/50 bg-slate-500/20'>
-              <a
-                href='index.html'
-                className='font-inter text-[14px] leading-[17px]'>
-                Adventure
-              </a>
-            </li>
-            <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
-              <a
-                href='index.html'
-                className='font-inter text-[14px] leading-[17px]'>
-                Novel
-              </a>
-            </li>
-            <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
-              <a
-                href='index.html'
-                className='font-inter text-[14px] leading-[17px]'>
-                Sci-Fi
-              </a>
-            </li>
-            <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
-              <a
-                href='index.html'
-                className='font-inter text-[14px] leading-[17px]'>
-                Self-Help
-              </a>
-            </li>
-          </ul>
+          <div className='flex gap-3'>
+            <BookGenreMenu items={bookGenre} />
+          </div>
         </button>
       </section>
       {/* // <!-- carousel --> */}
@@ -124,10 +130,10 @@ function ProductContent(): JSX.Element {
         </div>
         <Link to='/product'>
           <div className='container mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-4 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
-            {Data.slice(startIndex, endIndex).map((value, index) => {
+            {Data.slice(startIndex, endIndex).map((value, i) => {
               return (
                 <ContentData
-                  key={index}
+                  key={i}
                   name={value.name}
                   img={value.img}
                   rating={value.rating}

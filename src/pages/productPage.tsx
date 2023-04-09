@@ -1,10 +1,10 @@
 import React from 'react'
-import NavBar from '../components/navBar'
-import ProductWrapper from '../components/productWrapper'
-import ShippingDescWrapper from '../components/shippingDescWrapper'
-import SubscribeWrapper from '../components/subscribeWrapper'
-import FeaturedProductWrapper from '../components/featuredProductWrapper'
-import Footer from '../components/footer'
+import NavBar from '../components/navBar/navBar'
+import ProductWrapper from '../components/Wrapper/productWrapper'
+import ShippingDescWrapper from '../components/Wrapper/shippingDescWrapper'
+import SubscribeWrapper from '../components/Wrapper/subscribeWrapper'
+import FeaturedProductWrapper from '../components/Wrapper/featuredProductWrapper'
+import Footer from '../components/footer/footer'
 
 const ProductPage = (): React.ReactElement => {
   return (

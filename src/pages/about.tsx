@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../components/navBar'
-import Footer from '../components/footer'
+import Navbar from '../components/navBar/navBar'
+import Footer from '../components/footer/footer'
 
 const aboutUs = (): React.ReactElement => {
   return (

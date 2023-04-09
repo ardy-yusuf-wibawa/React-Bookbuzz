@@ -8,6 +8,7 @@ import LogIn from './pages/logIn'
 import ContactUs from './pages/contactUs'
 import AboutUs from './pages/about'
 import ProductPage from './pages/productPage'
+import ProductList from './pages/productList'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <ContactUs />
+  },
+  {
+    path: '/productlist',
+    element: <ProductList />
   },
   {
     path: '/signup',
