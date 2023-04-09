@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 import React, { useEffect, useState } from 'react'
 
-interface reviewListProps {
+interface ReviewListProps {
   items: Array<{
     src: string
     text: string
@@ -34,13 +34,13 @@ const reviewList = [
   }
 ]
 
-function Review({ items }: reviewListProps): JSX.Element {
+function Review({ items }: ReviewListProps): JSX.Element {
   return (
     <div>
       {items.map((item, index) => (
         <div
           className='flex flex-col justify-center items-center gap-6 w-[585px] h-[382px] '
-          key={index}>
+          key={items.length}>
           <img
             src={item.src}
             className='w-[81px] h-[90px] rounded-sm'
@@ -93,59 +93,3 @@ const ReviewWrapper = (): React.ReactElement => {
 }
 
 export default ReviewWrapper
-
-// const ReviewWrapper = (): React.ReactElement => {
-//   const [currentSlide, setCurrentSlide] = useState(0)
-//   const totalReviews = reviewList.length
-
-//   const handlePrev = () => {
-//     setCurrentSlide((currentSlide) =>
-//       currentSlide === 0 ? totalReviews - 1 : currentSlide - 1
-//     )
-//   }
-
-//   const handleNext = () => {
-//     setCurrentSlide((currentSlide) =>
-//       currentSlide === totalReviews - 1 ? 0 : currentSlide + 1
-//     )
-//   }
-
-//   return (
-//     <div
-//       style={{
-//         backgroundImage: 'url(./bannerReview.jpg)',
-//         backgroundRepeat: 'no-repeat',
-//         backgroundSize: 'cover'
-//       }}
-//       className='flex justify-between items-center w-auto h-[383px] gap-[10px] z-[-10]'>
-//       <section className='relative justify-between items-center mx-auto lg:w-[90%] px-4 w-full z-10'>
-//         <div className='mx-auto flex px-4 w-full'>
-//           <div className='z-10 flex w-full'>
-//             <button
-//               className='invisible sm:visible flex items-center justify-center
-//               bg-white rounded-full shadow-[0_2px_5px_-0px_rgba(0,0,0,0.3)]
-//               absolute top-[50%] w-[42px] h-[42px] -left-[0.6vw]'
-//               onClick={handlePrev}
-//               disabled={currentSlide === 0}>
-//               {/* svg button */}
-//             </button>
-
-//             <button
-//               className='invisible sm:visible flex items-center justify-center
-//               bg-white rounded-full shadow-[0_2px_5px_-0px_rgba(0,0,0,0.3)]
-//               absolute top-[50%] w-[42px] h-[42px] -right-[0.8vw]'
-//               onClick={handleNext}
-//               disabled={currentSlide === totalReviews - 1}>
-//               {/* svg button */}
-//             </button>
-//           </div>
-//         </div>
-//         <div className='container justify-center items-center mx-auto flex px-4 w-full sm:py-[20px]  pt-[200px] pb-10'>
-//           <Review items={[reviewList[currentSlide]]} />
-//         </div>
-//       </section>
-//     </div>
-//   )
-// }
-
-// export default ReviewWrapper

@@ -1,5 +1,5 @@
-import ProductProp from './productProp'
-import List from '../list.json'
+import ProductProp from '../productContent/productProp'
+import List from '../../list.json'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -18,7 +18,7 @@ const featuredProductWrapper = (): React.ReactElement => {
           {List.map((v, i) => {
             return (
               <ProductProp
-                key={i}
+                key={List.length}
                 name={v.name}
                 category={v.category}
                 price={v.price}

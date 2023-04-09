@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
-interface sideBarProps {
+interface SideBarProps {
   items: Array<{
     text: string
     path: string
@@ -17,14 +17,14 @@ const sideBar = [
   { text: 'Contact', path: '/contact' }
 ]
 
-function SideBarMenu({ items }: sideBarProps) {
+function SideBarMenu({ items }: SideBarProps) {
   return (
     <ul>
       <li className='mb-1'>
-        {items.map((item, i) => (
+        {items.map((item) => (
           <Link
             to={item.path}
-            key={i}
+            key={item.text}
             className='block p-4 text-sm font-semibold text-red-400 hover:bg-red-50 hover:text-red-600 rounded'>
             {item.text}
           </Link>
@@ -89,8 +89,8 @@ const HamburgerBar = (): React.ReactElement => {
                 to='#'
                 className='mx-auto'>
                 <p className='font-black capitalize font-montserrat text-[24px] sm:text-[24px] italic font-feature-settings-tnum-onum-ordn-ss02-ss03-ss04-salt-ss01'>
-          BOOKBUZZ.
-        </p>
+                  BOOKBUZZ.
+                </p>
               </Link>
 
               <button
@@ -111,13 +111,11 @@ const HamburgerBar = (): React.ReactElement => {
               </button>
             </div>
             <div>
-
               <ul className='flex mx-auto justify-center text-center'>
                 <li className='mb-1 '>
                   <SideBarMenu items={sideBar} />
                 </li>
               </ul>
-
             </div>
           </nav>
         </div>

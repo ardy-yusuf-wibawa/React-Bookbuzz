@@ -2,20 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '@fontsource/poppins'
 
-interface nameBarProps {
+interface NameBarProps {
   items: Array<{
     text: string
     path: string
   }>
 }
 
-function NameBar({ items }: nameBarProps) {
+function NameBar({ items }: NameBarProps) {
   return (
     <ul
       className='flex items-center relative text-[#131246] gap-5
           font-poppins font-medium text-xs leading-6'>
-      {items.map((item, i) => (
-        <li key={i}>
+      {items.map((item) => (
+        <li key={item.path}>
           <Link to={item.path}>{item.text}</Link>
         </li>
       ))}
