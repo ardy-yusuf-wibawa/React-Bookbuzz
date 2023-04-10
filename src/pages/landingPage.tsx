@@ -7,7 +7,7 @@ import ShippingDescWrapper from '../components/shippingDescWrapper'
 import SubscribeWrapper from '../components/subscribeWrapper'
 import CategoryWrapper from '../components/CategoryWrapper'
 import Footer from '../components/Footer'
-import FeaturedProductWrapper from '../components/featuredProductWrapper'
+import FeaturedProductWrapper from '../components/FeaturedProductWrapper'
 import HeroContent from '../components/HeroContent'
 
 const landingPage = (): React.ReactElement => {

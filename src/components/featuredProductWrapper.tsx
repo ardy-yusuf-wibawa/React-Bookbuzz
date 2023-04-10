@@ -1,5 +1,5 @@
-import Product from './product'
-import List from '../list.json'
+import Product from './Products'
+import List from '../List.json'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -27,7 +27,7 @@ const FeaturedProductWrapper =
               category={v.category}
               price={v.price}
               img={v.img}
-              star={v.star}
+              rating={v.rating}
               />
               )
             })}

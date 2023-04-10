@@ -3,7 +3,7 @@ import NavBar from '../components/navBar'
 import ProductWrapper from '../components/ProductWrapper'
 import ShippingDescWrapper from '../components/shippingDescWrapper'
 import SubscribeWrapper from '../components/subscribeWrapper'
-import FeaturedProductWrapper from '../components/featuredProductWrapper'
+import FeaturedProductWrapper from '../components/FeaturedProductWrapper'
 import Footer from '../components/Footer'
 
 const ProductPage = (): React.ReactElement => {
