@@ -1,9 +1,9 @@
 import React from 'react'
 import NavBar from '../components/navBar/navBar'
-import ProductWrapper from '../components/Wrapper/productWrapper'
-import ShippingDescWrapper from '../components/Wrapper/shippingDescWrapper'
-import SubscribeWrapper from '../components/Wrapper/subscribeWrapper'
-import FeaturedProductWrapper from '../components/Wrapper/featuredProductWrapper'
+import ProductWrapper from '../components/wrapper/productWrapper'
+import ShippingDescWrapper from '../components/wrapper/shippingDescWrapper'
+import SubscribeWrapper from '../components/wrapper/subscribeWrapper'
+import FeaturedProductWrapper from '../components/wrapper/featuredProductWrapper'
 import Footer from '../components/footer/footer'
 
 const ProductPage = (): React.ReactElement => {

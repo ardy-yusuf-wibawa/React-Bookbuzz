@@ -40,7 +40,7 @@ function TextList({ items }: TextListProps): JSX.Element {
   return (
     <ul className='text-[16px] flex flex-col gap-[15px] opacity-70'>
       {items.map((item, i) => (
-        <li key={items.length}>{item}</li>
+        <li key={item}>{item}</li>
       ))}
     </ul>
   )
@@ -50,7 +50,7 @@ function LinkList({ items }: LinkListProps): JSX.Element {
   return (
     <ul className='text-[14px] flex flex-col gap-[20px] opacity-70'>
       {items.map((item, i) => (
-        <li key={items.length}>
+        <li key={item.path}>
           <a href={item.path}>{item.text}</a>
         </li>
       ))}
@@ -60,7 +60,7 @@ function LinkList({ items }: LinkListProps): JSX.Element {
 
 const Footer = (): React.ReactElement => {
   return (
-    <div className='bg-[#f6f6f6] py-0.5'>
+    <div className='bg-[#f6f6f6] relative py-0.5'>
       <div className='max-w-7xl w-full mx-auto flex lg:flex-row min-[100px]:flex-col min-[100px]:gap-[50px] sm:justify-left py-[70px] min-[100px]:justify-center'>
         <div className='flex flex-1  flex-col gap-[25px]'>
           <h1 className='text-[40px] font-bold capitalize font-montserrat'>BOOKBUZZ.</h1>

@@ -26,7 +26,7 @@ function BookGenreMenu({ items }: GenreBook) {
       {items.map((item) => (
         <ul
           className=''
-          key={item.src}>
+          key={item.genre}>
           <li className='rounded-sm text-slate-900/50 bg-slate-500/20'>
             <Link
               to={item.src}
