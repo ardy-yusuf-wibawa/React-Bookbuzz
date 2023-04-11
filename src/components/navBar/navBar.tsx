@@ -37,7 +37,7 @@ function NameBar({ items }: NameBarProps) {
 const Navbar = (): React.ReactElement => {
   return (
     <nav className='bg-[#f6f6f6]'>
-      <div className='max-w-7xl mx-auto flex justify-between items-center  md:h-[90px]'>
+      <div className='max-w-7xl mx-auto flex justify-between items-center md:h-[90px]'>
         <div className='justify-start flex sm:pt-[20px] items-start self-start '>
           <p className='font-black capitalize font-montserrat text-[16px] sm:text-[36px] leading-[44px] tracking-[.075em] italic font-feature-settings-tnum-onum-ordn-ss02-ss03-ss04-salt-ss01'>
             BOOKBUZZ.

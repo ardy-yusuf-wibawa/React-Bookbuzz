@@ -7,7 +7,7 @@ import FilterPagination from './filterPagination'
 
 function ProductListFilter(): React.ReactElement {
   const [currentPage, setCurrentPage] = useState(1)
-  const [itemsPerPage, setItemsPerPage] = useState(15)
+  const [itemsPerPage, setItemsPerPage] = useState(5)
   const totalPages = Math.ceil(Data.length / itemsPerPage)
 
   const handlePageChange = (pageNumber: number): void => {
@@ -93,10 +93,10 @@ function ProductListFilter(): React.ReactElement {
               id='numbers'
               value={itemsPerPage}
               onChange={handleItemsPerPageChange}>
+              <option value='5'>5</option>
+              <option value='10'>10</option>
               <option value='15'>15</option>
-              <option value='30'>30</option>
-              <option value='60'>60</option>
-              <option value='90'>90</option>
+              <option value='20'>20</option>
             </select>
             <label htmlFor='books'>Sort by:</label>
             <select
@@ -297,7 +297,7 @@ function ProductListFilter(): React.ReactElement {
               </span>
             </div>
           </div>
-          <div className='container px-[50px] py-10 w-[960px] h-[1380px] flex items-start flex-col'>
+          <div className='relative container px-[50px] py-10 w-[960px] h-[1380px] flex items-start flex-col'>
             <Link to='/product'>
               <div className='mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-5 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
                 {Data.slice(startIndex, endIndex).map((value, i) => {
