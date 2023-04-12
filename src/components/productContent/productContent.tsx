@@ -1,19 +1,49 @@
 import React, { useState } from 'react'
 import '@fontsource/poppins'
 import '@fontsource/inter'
-import Data from '../Data.json'
-import ContentData from './lib/contentData'
-import Pagination from './lib/pagination'
+import Data from '../../data.json'
+import ContentData from '../lib/contentData'
+import Pagination from './pagination'
 import { Link } from 'react-router-dom'
 
-function ProductContent(): React.ReactElement {
-  const [currentPage, setCurrentPage] =
-    useState(1)
+interface GenreBook {
+  items: Array<{
+    genre: string
+    src: string
+  }>
+}
+
+const bookGenre = [
+  { genre: 'Adventure', src: '#' },
+  { genre: 'Novel', src: '#' },
+  { genre: 'Sci-fi', src: '#' },
+  { genre: 'Self-Help', src: '#' }
+]
+
+function BookGenreMenu({ items }: GenreBook) {
+  return (
+    <>
+      {items.map((item) => (
+        <ul
+          className=''
+          key={item.genre}>
+          <li className='rounded-sm text-slate-900/50 bg-slate-500/20'>
+            <Link
+              to={item.src}
+              className='font-inter text-[14px] leading-[17px]'>
+              {item.genre}
+            </Link>
+          </li>
+        </ul>
+      ))}
+    </>
+  )
+}
+function ProductContent(): JSX.Element {
+  const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 8
 
-  const handlePageChange = (
-    pageNumber: number
-  ): void => {
+  const handlePageChange = (pageNumber: number): void => {
     setCurrentPage(pageNumber)
   }
 
@@ -25,13 +55,10 @@ function ProductContent(): React.ReactElement {
     setCurrentPage((prevPage) => prevPage + 1)
   }
 
-  const startIndex =
-    (currentPage - 1) * itemsPerPage
+  const startIndex = (currentPage - 1) * itemsPerPage
   const endIndex = startIndex + itemsPerPage
 
-  const totalPages = Math.ceil(
-    Data.length / itemsPerPage
-  )
+  const totalPages = Math.ceil(Data.length / itemsPerPage)
 
   return (
     <>
@@ -47,43 +74,15 @@ function ProductContent(): React.ReactElement {
       <span
         className='flex justify-center font-inter text-[14px] text-center p-2
         leading-[17px] text-slate-900/50'>
-        Mirum est notare quam littera gothica,
-        quam nunc putamus parum claram
-        anteposuerit litterarum formas.
+        Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit
+        litterarum formas.
       </span>
       {/* menubar */}
       <section className='flex items-center relative justify-center '>
         <button className='relative'>
-          <ul className='flex items-center relative gap-3'>
-            <li className='rounded-sm text-slate-900/50 bg-slate-500/20'>
-              <a
-                href='index.html'
-                className='font-inter text-[14px] leading-[17px]'>
-                Adventure
-              </a>
-            </li>
-            <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
-              <a
-                href='index.html'
-                className='font-inter text-[14px] leading-[17px]'>
-                Novel
-              </a>
-            </li>
-            <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
-              <a
-                href='index.html'
-                className='font-inter text-[14px] leading-[17px]'>
-                Sci-Fi
-              </a>
-            </li>
-            <li className='p-0 rounded-sm text-slate-900/50 bg-slate-500/20'>
-              <a
-                href='index.html'
-                className='font-inter text-[14px] leading-[17px]'>
-                Self-Help
-              </a>
-            </li>
-          </ul>
+          <div className='flex gap-3'>
+            <BookGenreMenu items={bookGenre} />
+          </div>
         </button>
       </section>
       {/* // <!-- carousel --> */}
@@ -114,9 +113,7 @@ function ProductContent(): React.ReactElement {
              bg-white rounded-full shadow-[0_2px_5px_-0px_rgba(0,0,0,0.3)]
               absolute top-[50%] w-[42px] h-[42px] -right-[0.8vw]'
               onClick={handleNext}
-              disabled={
-                currentPage === totalPages
-              }>
+              disabled={currentPage === totalPages}>
               <svg
                 stroke='currentColor'
                 fill='currentColor'
@@ -132,26 +129,22 @@ function ProductContent(): React.ReactElement {
           </div>
         </div>
         <Link to='/product'>
-        <div className='container mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-4 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
-          {Data.slice(startIndex, endIndex).map(
-            (value, index) => {
+          <div className='container mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-4 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
+            {Data.slice(startIndex, endIndex).map((value, i) => {
               return (
                 <ContentData
-                key={index}
-                name={value.name}
-                img={value.img}
-                rating={value.rating}
-                nameProduct={value.nameProduct}
-                price={value.price}
-                discountPrice={
-                  value.discountPrice
-                }
+                  key={i}
+                  name={value.name}
+                  img={value.img}
+                  rating={value.rating}
+                  nameProduct={value.nameProduct}
+                  price={value.price}
+                  discountPrice={value.discountPrice}
                 />
-                )
-              }
-              )}
-        </div>
-              </Link>
+              )
+            })}
+          </div>
+        </Link>
       </section>
       <div className='pt-[120px] md:pt-[50px] items-center justify-center flex'>
         <Pagination
