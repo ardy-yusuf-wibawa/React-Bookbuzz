@@ -9,10 +9,10 @@ const AboutUs = (): React.ReactElement => {
       {/* About Us */}
       <div className=' md:flex items-center justify-center'>
         <div className='flex flex-col items-center justify-center w-full h-[273px] p-[] bg-[#F6F6F6]'>
-          <h2 className='flex items-center justify-center font-bold text-4xl mb-2'>
+          <h2 className='flex items-center justify-center font-bold text-[40px] mb-2'>
             About Us
           </h2>
-          <p className='font-normal flex-non'>
+          <p className='font-normal flex-non text-[12px]'>
             learn more about the company
           </p>
         </div>
@@ -20,10 +20,10 @@ const AboutUs = (): React.ReactElement => {
       {/* Intro Section */}
       <div className='inline-block md:flex items-center justify-center mx-auto px-4'>
         <div className='w-1/2 '>
-          <h1 className='font-extrabold leading-[43.57px]'>
+          <h1 className='font-extrabold leading-[44px] text-center text-[36px]'>
             WELCOME TO BOOKBUZZ
           </h1>
-          <p className='font-normal text-sm mt-3'>
+          <p className='font-normal leading-[17px] text-[14px] mt-3 text-center mx-4'>
             Welcome to our online bookstore! We
             have a vast collection of books <br />{' '}
             for all ages and interests, with the
@@ -65,57 +65,54 @@ const AboutUs = (): React.ReactElement => {
           </div>
         </div>
       </div>
-      <div className='grid lg:grid-cols-2 mt-20 gap-8 sm:grid-cols-1'>
+      <div className='flex items-center justify-around text-center mt-20'>
         <div className=''>
-          <h1 className='font-bold text-2xl leading-[29.05px]'>
+          <h1 className='font-bold text-[24px] leading-[29.05px] mb-2'>
             OUR MESSAGE
           </h1>
-          <p className='font normal text-sm'>
+          <p className='font normal text-[14px]'>
             Mirum est notare quam littera gothica,
             quam nunc putamus parum
           </p>
-          <p className='font normal text-sm'>
+          <p className='font normal text-[14px]'>
             claram, anteposuerit litterarum formas
             humanitatis per seacula
           </p>
-          <p className='font normal text-sm'>
+          <p className='font normal text-[14px]'>
             quarta decima et quinta decima.
           </p>
         </div>
         <div className=''>
-          <h1 className='font-bold text-2xl leading-[29.05px]'>
+          <h1 className='font-bold text-[24px] leading-[29.05px] mb-2'>
             OUR MESSAGE
           </h1>
-          <p className='font normal text-sm'>
+          <p className='font normal text-[14px]'>
             Mirum est notare quam littera gothica,
             quam nunc putamus parum
           </p>
-          <p className='font normal text-sm'>
+          <p className='font normal text-[14px]'>
             claram, anteposuerit litterarum formas
             humanitatis per seacula
           </p>
-          <p className='font normal text-sm'>
+          <p className='font normal text-[14px]'>
             quarta decima et quinta decima.
           </p>
         </div>
       </div>
-      <div className='mt-4'>
-        <h1 className='text-[32px] font-bold'>
+      <div className='text-center mb-20'>
+      <h1 className='text-[32px] font-bold leading-[29.05px] mb-2'>
           OUR GOAL
         </h1>
-        <p className='font normal text-sm'>
-          Mirum est notare quam littera gothica,
-          quam nunc putamus parum
+        <p className='font normal text-[14px]'>
+          Mirum est notare quam littera gothica, quam nunc putamus parum
         </p>
-        <p className='font normal text-sm'>
-          claram, anteposuerit litterarum formas
-          humanitatis per seacula
-        </p>
-        <p className='font normal text-sm'>
-          quarta decima et quinta decima.
-        </p>
+        <p className='font normal text-[14px]'>claram, anteposuerit litterarum formas humanitatis per seacula</p>  
+        <p className='font normal text-[14px]'>uarta decima et quinta decima.</p>
       </div>
-      <Footer/>
+      <div className='flex items-center justify-center'>
+        
+      </div>
+      <Footer />
     </div>
   )
 }
