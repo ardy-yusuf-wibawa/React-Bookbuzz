@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../components/navBar/navBar'
 import ProductContent from '../components/productContent/productContent'
-import BannerWrapper from '../components/wrapper/bannerWrapper'
+import BannerWrapper from '../components/Wrapper/bannerWrapper'
 import ProductWidget from '../components/productContent/productWidget'
-import ShippingDescWrapper from '../components/wrapper/shippingDescWrapper'
-import SubscribeWrapper from '../components/wrapper/subscribeWrapper'
-import CategoryWrapper from '../components/wrapper/categoryWrapper'
+import ShippingDescWrapper from '../components/Wrapper/shippingDescWrapper'
+import SubscribeWrapper from '../components/Wrapper/subscribeWrapper'
+import CategoryWrapper from '../components/Wrapper/categoryWrapper'
 import Footer from '../components/footer/footer'
-import FeaturedProductWrapper from '../components/wrapper/featuredProductWrapper'
+import FeaturedProductWrapper from '../components/Wrapper/featuredProductWrapper'
 import HeroContent from '../components/productContent/heroContent'
-import ReviewWrapper from '../components/wrapper/reviewWrapper'
+import ReviewWrapper from '../components/Wrapper/reviewWrapper'
 
 const landingPage = (): React.ReactElement => {
   return (
