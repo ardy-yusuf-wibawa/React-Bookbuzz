@@ -65,8 +65,7 @@ function SignUp(): React.ReactElement {
                                         focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
                         />
                         <div className='mt-[2px] hidden peer-invalid:block text-pink-600 text-sm'>
-                          Please provide a valid
-                          email address.
+                          Please provide a valid email address.
                         </div>
                       </div>
                     </div>
@@ -90,8 +89,7 @@ function SignUp(): React.ReactElement {
                                         focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
                         />
                         <span className='w-full lg:w-[360px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
-                          Must be at least 8
-                          characters.
+                          Must be at least 8 characters.
                         </span>
                       </div>
                     </div>
