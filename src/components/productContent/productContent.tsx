@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '@fontsource/poppins'
 import '@fontsource/inter'
 import Data from '../../data.json'
-import ContentData from '../lib/contentData'
+import ContentData from './contentData'
 import Pagination from './pagination'
 import { Link } from 'react-router-dom'
 
@@ -146,7 +146,7 @@ function ProductContent(): JSX.Element {
           </div>
         </Link>
       </section>
-      <div className='pt-[120px] md:pt-[50px] items-center justify-center flex'>
+      <div className='pt-[120px] md:pt-[50px] items-stretch justify-center flex'>
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
