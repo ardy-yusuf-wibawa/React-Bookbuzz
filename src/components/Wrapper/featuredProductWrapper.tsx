@@ -3,6 +3,14 @@ import List from '../../list.json'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+export interface ProductProps {
+  name: string
+  category: string
+  img: string
+  rating: number
+  price: string
+}
+
 const featuredProductWrapper = (): React.ReactElement => {
   return (
     <>
@@ -18,12 +26,12 @@ const featuredProductWrapper = (): React.ReactElement => {
           {List.map((v, i) => {
             return (
               <ProductProp
-                key={List.length}
+                key={i}
                 name={v.name}
                 category={v.category}
                 price={v.price}
                 img={v.img}
-                star={v.star}
+                rating={v.rating}
               />
             )
           })}

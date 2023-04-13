@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react'
-import ContentData from '../../components/lib/contentData'
+import ContentData from '../productContent/contentData'
 import Data from '../../data.json'
 import { Link } from 'react-router-dom'
 import FilterPagination from './filterPagination'
