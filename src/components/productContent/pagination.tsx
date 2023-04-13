@@ -33,14 +33,6 @@ function Pagination({ currentPage, totalPages, onPageChange }: Props) {
 
   return (
     <ul className='inline-flex gap-3 relative'>
-      {currentPage !== 1 && (
-        <li
-          className='cursor-pointer'
-          onClick={handleFirstPageClick}>
-          First
-        </li>
-      )}
-
       {currentPage > 1 && (
         <li
           className='cursor-pointer '
@@ -51,6 +43,13 @@ function Pagination({ currentPage, totalPages, onPageChange }: Props) {
         </li>
       )}
 
+      {currentPage >= 4 && (
+        <li
+          className='cursor-pointer'
+          onClick={handleFirstPageClick}>
+          1
+        </li>
+      )}
       {currentPage > 3 && <li className='cursor-pointer '>...</li>}
 
       {pageNumbers.map((pageNumber) => (
@@ -70,6 +69,13 @@ function Pagination({ currentPage, totalPages, onPageChange }: Props) {
 
       {currentPage < totalPages - 2 && <li className=' cursor-pointer '>...</li>}
 
+      {currentPage < totalPages - 2 && (
+        <li
+          className='cursor-pointer '
+          onClick={handleLastPageClick}>
+          {totalPages}
+        </li>
+      )}
       {currentPage < totalPages && (
         <li
           className='cursor-pointer '
@@ -77,14 +83,6 @@ function Pagination({ currentPage, totalPages, onPageChange }: Props) {
             handlePageClick(currentPage + 1)
           }}>
           Next
-        </li>
-      )}
-
-      {currentPage !== totalPages && (
-        <li
-          className='cursor-pointer '
-          onClick={handleLastPageClick}>
-          Last
         </li>
       )}
     </ul>

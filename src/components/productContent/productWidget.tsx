@@ -3,20 +3,18 @@ import React from 'react'
 const productWidget = (): React.ReactElement => {
   return (
     <>
-      <div
-        className='container justify-center items-center relative flex flex-wrap lg:grid lg:grid-cols-3 gap-y-4 gap-x-4 mx-auto px-6 font:poppins
-  sm:flex sm:flex-wrap sm:justify-center'>
-        <div className='w-[340px] h-[30px]'>
-          <div className='w-full relative gap-[432px] flex'>
-            <span className='relative flex w-[76px] h-[30px] text-[20px] font-bold'>
+      <div className='container justify-start px-4 items-center flex-nowrap relative flex mx-auto font-poppins'>
+        <div className='w-full h-[30px]'>
+          <div className='w-full relative flex'>
+            <span className='relative flex w-[33.33%] h-[30px] text-[20px] font-bold'>
               Spesial
               <span className='h-[1px] ml-[75px] w-[247px] inset-x-0 top-1/2 bg-gray-500 absolute bottom-0 left-0'></span>
             </span>
-            <span className='relative flex w-[76px] h-[30px] text-[20px] font-bold '>
+            <span className='relative flex w-[33.33%] h-[30px] text-[20px] font-bold'>
               Latest
               <span className='h-[1px] ml-[75px] w-[247px] inset-x-0 top-1/2 bg-gray-500 absolute bottom-0 left-0'></span>
             </span>
-            <span className='relative px-3 flex w-[76px] h-[30px] text-[20px] font-bold pr-4'>
+            <span className='relative flex w-[33.33%] h-[30px] text-[20px] font-bold'>
               Top
               <span className='h-[1px] ml-[75px] w-[247px] inset-x-0 top-1/2 bg-gray-500 absolute bottom-0 left-0'></span>
             </span>
