@@ -197,7 +197,7 @@ function Cart(): React.ReactElement {
                   </Link>
                 </div>
                 <div className='w-[50%] flex justify-end items-center'>
-                  <button className='px-[14px] py-[6px] border rounded-lg bg-black border-solid '>
+                  <button className='px-[14px] py-[6px] border border-black rounded-lg bg-black border-solid '>
                     <span className='font-inter text-base font-semibold text-[#fff]'>
                       Continue to shipping
                     </span>
