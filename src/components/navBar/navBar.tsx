@@ -69,7 +69,7 @@ const Navbar = (): React.ReactElement => {
               </svg>
             </Link>
             <Link
-              to='/productlist'
+              to='/cart'
               id='shopping-cart'
               className='hidden sm:block'>
               <svg
