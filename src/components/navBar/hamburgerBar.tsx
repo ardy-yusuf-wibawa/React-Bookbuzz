@@ -12,7 +12,7 @@ const sideBar = [
   { text: 'Sign Up', path: '/signup' },
   { text: 'Login', path: '/login' },
   { text: 'Home', path: '/' },
-  { text: 'Shop', path: '/shop' },
+  { text: 'Shop', path: '/productlist' },
   { text: 'About', path: '/about' },
   { text: 'Contact', path: '/contact' }
 ]
