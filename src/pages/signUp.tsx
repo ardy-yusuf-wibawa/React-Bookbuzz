@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
+import FormSignup from '../components/userForm/userFormSignup'
 
 function SignUp(): React.ReactElement {
   return (
@@ -10,7 +11,7 @@ function SignUp(): React.ReactElement {
         <div className='flex-row flex items-center w-full h-[90%]'>
           <section className='flex-col flex justify-start items-start w-full h-full lg:w-[95%] lg:h-[880px]'>
             <div className='flex flex-row items-start px-4 pt-[48px] pb-[10px] lg:p-[32px] w-full lg:w-[640px] h-[32px]'>
-              <span className='self-start lg:hidden block relative font-poppins font-bold text-[32px] leading-[48px] tracking-[.075em] text-[#131246]'>
+              <span className='self-start lg:hidden block font-black capitalize font-montserrat text-[32px] sm:text-[36px] leading-[44px] tracking-[.075em] italic font-feature-settings-tnum-onum-ordn-ss02-ss03-ss04-salt-ss01 text-[#131246]'>
                 BOOKBUZZ
               </span>
             </div>
@@ -22,87 +23,7 @@ function SignUp(): React.ReactElement {
                   </span>
                 </div>
                 <div className='flex flex-col items-center p-0 gap-3 w-full lg:w-[360px] h-full rounded-xl'>
-                  <div className='flex flex-col items-start p-0 gap-3 w-full lg:w-[360px] h-full '>
-                    <div className='flex flex-col items-start p-0 w-full lg:w-[360px] h-[70px] '>
-                      <div className='flex flex-col items-start p-0 gap-[4px] w-full lg:w-[360px] h-[70px]'>
-                        <label
-                          htmlFor='input'
-                          className="after:content-['*'] after:text-red-500 font-inter font-medium text-[14px] leading-5 text-[#344054] w-full h-[20px]">
-                          Name
-                        </label>
-                        <input
-                          type='text'
-                          name='user_full_name'
-                          placeholder='Enter your name'
-                          className='flex flex-row items-center
-                                        gap-2 box-border h-[44px]
-                                        w-full lg:w-[360px] px-[10px] py-[14px] text-[16px] leading-6
-                                        rounded-lg border-2 border-solid border-gray-300
-                                        text-[#344054] focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                                        invalid:border-pink-500 invalid:text-pink-600
-                                        focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                        />
-                      </div>
-                    </div>
-
-                    <div className='flex flex-col items-start p-0 w-full lg:w-[360px] h-full '>
-                      <div className='flex flex-col items-start p-0 gap-[4px] w-full lg:w-[360px] h-full'>
-                        <label
-                          htmlFor='input'
-                          className="after:content-['*'] after:text-red-500 font-inter font-medium text-[14px] leading-5 text-[#344054] w-full h-[20px]">
-                          Email
-                        </label>
-                        <input
-                          type='email'
-                          name='user_email'
-                          placeholder='Enter your email'
-                          className='peer flex flex-row items-center
-                                        gap-2 box-border h-[44px]
-                                        w-full lg:w-[360px] px-[10px] py-[14px] text-[16px] leading-6
-                                        rounded-lg border-2 border-solid border-gray-300
-                                        text-[#344054] focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                                        invalid:border-pink-500 invalid:text-pink-600
-                                        focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                        />
-                        <div className='mt-[2px] hidden peer-invalid:block text-pink-600 text-sm'>
-                          Please provide a valid email address.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className='flex flex-col items-start p-0 w-full lg:w-[360px] h-full'>
-                      <div className='flex flex-col items-start p-0 gap-[4px] w-full h-[70px]'>
-                        <label
-                          htmlFor='input'
-                          className="after:content-['*'] after:text-red-500 font-inter font-medium text-[14px] leading-5 text-[#344054] w-full h-[20px]">
-                          Password
-                        </label>
-                        <input
-                          type='password'
-                          name='user_email'
-                          placeholder='Enter your password'
-                          className='flex flex-row items-center gap-2 box-border h-[44px] w-full
-                                        lg:w-[360px] px-[10px] py-[14px] text-[16px] leading-6 rounded-lg border-2
-                                        border-solid border-gray-300 text-[#344054]
-                                        focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                                        invalid:border-pink-500 invalid:text-pink-600
-                                        focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                        />
-                        <span className='w-full lg:w-[360px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
-                          Must be at least 8 characters.
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='w-full lg:w-[360px] h-[104px] flex flex-col items-center lg:items-start p-0 pt-[44px] gap-4'>
-                    <button
-                      className='flex flex-row justify-center items-center px-[10px] py-[18px] gap-2 w-full lg:w-[360px] h-[44px]
-                                    bg-black border-[1px] border-solid shadow-[0_0px_1px_2px_rgba(16,24,40,0.05)] rounded-lg '>
-                      <span className='w-full lg:w-[119px] h-[24px] font-inter font-semibold text-[16px] leading-6 text-[#ffffff]'>
-                        Create account
-                      </span>
-                    </button>
-                  </div>
+                  <FormSignup />
                   <div className='w-full lg:w-[360px] h-[44px] flex flex-col justify-center items-center p-0 gap-3'>
                     <button
                       className='flex flex-row justify-center items-center px-[10px] py-[16px] gap-3 w-full lg:w-[360px] h-[44px]

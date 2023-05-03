@@ -13,7 +13,7 @@ interface NameBarProps {
 
 const nameBar = [
   { text: 'Home', path: '/' },
-  { text: 'Shop', path: '/shop' },
+  { text: 'Shop', path: '/productlist' },
   { text: 'About', path: '/about' },
   { text: 'Contact', path: '/contact' }
 ]
