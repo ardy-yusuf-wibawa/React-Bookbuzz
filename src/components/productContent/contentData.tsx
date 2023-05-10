@@ -62,7 +62,7 @@ const Product = ({ name, img, rating, nameProduct, price, discountPrice }: Produ
           className='shadow-xl items-center h-auto max-w-[248px] w-full border border-[rgba(0,0,0,0.3)]'
         />
       </div>
-      <div className='border border-[rgba(0,0,0,0.3)] pt-2 px-[10px] max-w-[248px] w-full '>
+      <div className='border border-[rgba(0,0,0,0.3)] pt-2 px-[10px] h-[100px] max-w-[248px] w-full '>
         <div className='flex justify-between'>
           <span className='font-normal font-inter sm:text-[12px] text-[10px] text-[#000000]/60 leading-4'>
             {name}

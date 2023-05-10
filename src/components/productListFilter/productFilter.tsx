@@ -7,8 +7,9 @@ import FilterPagination from './filterPagination'
 
 function ProductListFilter(): React.ReactElement {
   const [currentPage, setCurrentPage] = useState(1)
-  const [itemsPerPage, setItemsPerPage] = useState(5)
+  const [itemsPerPage, setItemsPerPage] = useState(3)
   const totalPages = Math.ceil(Data.length / itemsPerPage)
+  const totalResults = Math.min(currentPage * itemsPerPage, Data.length)
 
   const handlePageChange = (pageNumber: number): void => {
     setCurrentPage(pageNumber)
@@ -83,8 +84,8 @@ function ProductListFilter(): React.ReactElement {
                               3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z'></path>
           </svg>
           <input
-            placeholder='Showing 1-9 of 9 result'
-            className='w-[154px] h-[17px] font-inter font-normal text-sm'
+            placeholder={`Showing 1-${totalResults} of ${Data.length} results`}
+            className='w-auto h-[17px] font-inter font-normal text-sm'
           />
           <div className='ml-auto gap-4 flex'>
             <label htmlFor='books'>Show:</label>
@@ -93,10 +94,10 @@ function ProductListFilter(): React.ReactElement {
               id='numbers'
               value={itemsPerPage}
               onChange={handleItemsPerPageChange}>
-              <option value='5'>5</option>
-              <option value='10'>10</option>
-              <option value='15'>15</option>
-              <option value='20'>20</option>
+              <option value='3'>3</option>
+              <option value='6'>6</option>
+              <option value='9'>9</option>
+              <option value='12'>12</option>
             </select>
             <label htmlFor='books'>Sort by:</label>
             <select
@@ -299,7 +300,7 @@ function ProductListFilter(): React.ReactElement {
           </div>
           <div className='relative container px-[50px] py-10 w-[960px] h-[1380px] flex items-start flex-col'>
             <Link to='/product'>
-              <div className='mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-5 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
+              <div className='mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-3 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
                 {Data.slice(startIndex, endIndex).map((value, i) => {
                   return (
                     <ContentData
@@ -318,7 +319,7 @@ function ProductListFilter(): React.ReactElement {
             <div className='flex justify-between items-center w-auto h-[150px]'>
               <div className='px-4 flex justify-between items-center w-auto h-[50px] border-t-2 border-b-2'>
                 <span className='items-center flex justify-start relative w-[425px] text-[12px] h-[17px]'>
-                  Showing 1 - 0 of 32 result
+                  {`Showing 1-${totalResults} of ${Data.length} results`}
                 </span>
                 <div className='items-center text-[12px] justify-end flex relative w-[400px] h-[17px] gap-[30px]'>
                   <FilterPagination

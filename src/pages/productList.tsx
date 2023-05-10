@@ -11,7 +11,9 @@ function ProductList(): React.ReactElement {
       {/* Main title */}
       <Navbar />
       <ProductListFilter />
-      <Footer />
+      <div className='pt-[550px]'>
+        <Footer />
+      </div>
     </>
   )
 }
