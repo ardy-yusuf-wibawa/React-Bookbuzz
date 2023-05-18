@@ -1,18 +1,51 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ContentData from '../productContent/contentData'
-import Data from '../../data.json'
 import { Link } from 'react-router-dom'
 import FilterPagination from './filterPagination'
+import axios from 'axios'
+
+interface Product {
+  id: number
+  product_id: string
+  title_book: string
+  author: string
+  genre_id: number
+  description: string
+  thumbnail: string
+  price: number
+  stock: number
+  review_id: number
+  createdAt: string
+  updatedAt: string
+}
 
 function ProductListFilter(): React.ReactElement {
   const [currentPage, setCurrentPage] = useState(1)
-  const [itemsPerPage, setItemsPerPage] = useState(5)
-  const totalPages = Math.ceil(Data.length / itemsPerPage)
+  const [itemsPerPage, setItemsPerPage] = useState(3)
+
+  const [products, setProducts] = useState<Product[]>([])
+
+  useEffect(() => {
+    // Fetch data from the API
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://172.29.114.152:3131/productlist')
+        const data = response.data
+        setProducts(data.data)
+        console.log(data.data)
+      } catch (error) {
+        console.error('Error fetching data:', error)
+      }
+    }
+
+    void fetchData()
+  }, [])
 
   const handlePageChange = (pageNumber: number): void => {
     setCurrentPage(pageNumber)
   }
+  const totalPages = Math.ceil(products.length / itemsPerPage)
 
   const handleItemsPerPageChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
     setItemsPerPage(Number(event.target.value))
@@ -93,10 +126,9 @@ function ProductListFilter(): React.ReactElement {
               id='numbers'
               value={itemsPerPage}
               onChange={handleItemsPerPageChange}>
-              <option value='5'>5</option>
-              <option value='10'>10</option>
-              <option value='15'>15</option>
-              <option value='20'>20</option>
+              <option value='3'>3</option>
+              <option value='6'>6</option>
+              <option value='9'>9</option>
             </select>
             <label htmlFor='books'>Sort by:</label>
             <select
@@ -299,20 +331,16 @@ function ProductListFilter(): React.ReactElement {
           </div>
           <div className='relative container px-[50px] py-10 w-[960px] h-[1380px] flex items-start flex-col'>
             <Link to='/product'>
-              <div className='mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-5 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
-                {Data.slice(startIndex, endIndex).map((value, i) => {
-                  return (
-                    <ContentData
-                      key={i}
-                      name={value.name}
-                      img={value.img}
-                      rating={value.rating}
-                      nameProduct={value.nameProduct}
-                      price={value.price}
-                      discountPrice={value.discountPrice}
-                    />
-                  )
-                })}
+              <div className='mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-3 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
+                {products.slice(startIndex, endIndex).map((product, index) => (
+                  <ContentData
+                    key={index}
+                    name={product.author}
+                    img={product.thumbnail}
+                    nameProduct={product.title_book}
+                    price={product.price}
+                  />
+                ))}
               </div>
             </Link>
             <div className='flex justify-between items-center w-auto h-[150px]'>
