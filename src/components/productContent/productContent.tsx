@@ -1,16 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '@fontsource/poppins'
 import '@fontsource/inter'
-import Data from '../../data.json'
 import ContentData from './contentData'
 import Pagination from './pagination'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 interface GenreBook {
   items: Array<{
     genre: string
     src: string
   }>
+}
+
+interface Product {
+  id: number
+  product_id: string
+  title_book: string
+  author: string
+  genre_id: number
+  description: string
+  thumbnail: string
+  price: number
+  stock: number
+  review_id: number
+  createdAt: string
+  updatedAt: string
 }
 
 const bookGenre = [
@@ -39,9 +54,27 @@ function BookGenreMenu({ items }: GenreBook) {
     </>
   )
 }
+
 function ProductContent(): JSX.Element {
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 8
+  const [products, setProducts] = useState<Product[]>([])
+
+  useEffect(() => {
+    // Fetch data from the API
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://172.29.114.152:3131/productlist')
+        const data = response.data
+        setProducts(data.data)
+        console.log(data.data)
+      } catch (error) {
+        console.error('Error fetching data:', error)
+      }
+    }
+
+    void fetchData()
+  }, [])
 
   const handlePageChange = (pageNumber: number): void => {
     setCurrentPage(pageNumber)
@@ -58,8 +91,7 @@ function ProductContent(): JSX.Element {
   const startIndex = (currentPage - 1) * itemsPerPage
   const endIndex = startIndex + itemsPerPage
 
-  const totalPages = Math.ceil(Data.length / itemsPerPage)
-
+  const totalPages = Math.ceil(products.length / itemsPerPage)
   return (
     <>
       <section className='relative flex container justify-center mx-auto px-4 py-4'>
@@ -130,19 +162,15 @@ function ProductContent(): JSX.Element {
         </div>
         <Link to='/product'>
           <div className='container mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-4 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
-            {Data.slice(startIndex, endIndex).map((value, i) => {
-              return (
-                <ContentData
-                  key={i}
-                  name={value.name}
-                  img={value.img}
-                  rating={value.rating}
-                  nameProduct={value.nameProduct}
-                  price={value.price}
-                  discountPrice={value.discountPrice}
-                />
-              )
-            })}
+            {products.slice(startIndex, endIndex).map((product, index) => (
+              <ContentData
+                key={index}
+                name={product.author}
+                img={product.thumbnail}
+                nameProduct={product.title_book}
+                price={product.price}
+              />
+            ))}
           </div>
         </Link>
       </section>

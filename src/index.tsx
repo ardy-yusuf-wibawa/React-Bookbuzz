@@ -10,6 +10,7 @@ import AboutUs from './pages/about'
 import ProductPage from './pages/productPage'
 import ProductList from './pages/productList'
 import Cart from './pages/cart'
+import HistoryTransaction from './pages/HistoryTransaction'
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <SignUp />
+  },
+  {
+    path: '/history',
+    element: <HistoryTransaction />
   }
 ])
 
