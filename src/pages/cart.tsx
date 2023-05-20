@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import DetailCart from './DetailCart'
 
 interface CartBarProps {
   items: Array<{
@@ -29,7 +30,17 @@ const cartBar = [
   { text: 'Payment', path: '/contact' }
 ]
 
-function Cart(): React.ReactElement {
+interface Items {
+  id: number
+  item: string
+  qty: number
+}
+
+function Cart() {
+  const [items, setItems] = useState<Items[]>([{ id: 1, item: 'Dilan 1990 - $29.99', qty: 1 }, { id: 2, item: 'Lupus 2002 - $12.99', qty: 1 }])
+  useEffect(() => {
+    console.log('🚀 ~ file: cart.tsx:50 ~ Cart ~ items:', items)
+  }, [items])
   return (
     <section className='mx-auto w-full max-h-[100vh] relative'>
       <div className='flex left-0 top-0 items-center w-full'>
@@ -204,6 +215,11 @@ function Cart(): React.ReactElement {
                   </button>
                 </div>
               </div>
+            </div>
+            <div className='flex flex-col items-center px-4 pt-[55px] pb-[10px] w-[50%] h-full gap-y-3 bg-slate-100 border rounded-md mt-32 mx-12'>
+              <DetailCart items={items} handleChangeItems={(val) => {
+                setItems(val)
+              }} />
             </div>
           </section>
         </div>

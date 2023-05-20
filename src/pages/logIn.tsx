@@ -1,6 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import { Link } from 'react-router-dom'
+import FormLogin from '../components/userForm/userFormLogin'
 
 function LogIn(): React.ReactElement {
   return (
@@ -20,84 +20,11 @@ function LogIn(): React.ReactElement {
                     Log In
                   </span>
                 </div>
-                <div className='flex flex-col items-center p-0 gap-6 w-full lg:w-[360px] h-full rounded-xl'>
-                  <div className='flex flex-col items-start p-0 gap-5 w-full lg:w-[360px] h-full '>
-                    <div className='flex flex-col items-start p-0 w-full lg:w-[360px] h-full '>
-                      <div className='flex flex-col items-start p-0 gap-2 w-full lg:w-[360px] h-full'>
-                        <label
-                          htmlFor='input'
-                          className="after:content-['*'] after:text-red-500 font-inter font-medium text-[14px] leading-5 text-[#344054] w-[47px] h-[20px]">
-                          Email
-                        </label>
-
-                        <input
-                          type='email'
-                          name='user_full_name'
-                          placeholder='Enter your email'
-                          className='peer flex flex-row items-center
-                          gap-2 box-border h-[44px]
-                          w-full lg:w-[360px] px-[10px] py-[14px] text-[16px] leading-6
-                          rounded-lg border-2 border-solid border-gray-300
-                          text-[#344054] focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                          invalid:border-pink-500 invalid:text-pink-600
-                          focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                        />
-                        <div className='mt-2 hidden peer-invalid:block text-pink-600 text-sm'>
-                          Please provide a valid email address.
-                        </div>
-                      </div>
-                    </div>
-                    <div className='flex flex-col items-start p-0 w-full lg:w-[360px] h-[70px]'>
-                      <div className='flex flex-col items-start p-0 gap-[6px] w-full h-[70px]'>
-                        <label
-                          htmlFor='input'
-                          className="after:content-['*'] after:text-red-500 font-inter font-medium text-[14px] leading-5 text-[#344054] w-[97px] h-[20px]">
-                          Password
-                        </label>
-
-                        <input
-                          type='password'
-                          name='user_password'
-                          placeholder='Enter your password'
-                          className='flex flex-row items-center gap-2 box-border h-[44px] w-full
-                          lg:w-[360px] px-[10px] py-[14px] text-[16px] leading-6 rounded-lg border-2
-                          border-solid border-gray-300 text-[#344054]
-                          focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                          invalid:border-pink-500 invalid:text-pink-600
-                          focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
-                        />
-
-                        <span className='w-full lg:w-[360px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
-                          Must be at least 8 characters.
-                        </span>
-                      </div>
-                    </div>
-                    <div className='flex flex-row items-center p-0 gap-2 lg:pt-6 pt-12 w-[177px] h-[20px]'>
-                      <label
-                        htmlFor='checkbox'
-                        className='flex flex-row justify-center items-center p-0 w-[16px] h-[16px]'>
-                        <input
-                          type='checkbox'
-                          className='w-[16px] h-[16px] bg-[#ffffff] border rounded border-solid border-[#d0d5dd]'
-                        />
-                      </label>
-                      <span className='w-[153px] h-[20px] font-inter font-medium text-[14px] leading-5 text-[#344054]'>
-                        Remember for 30 days
-                      </span>
-                    </div>
-                  </div>
-                  <div className='w-full lg:w-[360px] h-[90px] flex flex-col items-center lg:items-start lg:pt-[65px] pt-[40px] gap-4'>
+                <div className='flex flex-col items-center p-0 gap-6 w-full lg:w-[360px] h-auto rounded-xl'>
+                  <FormLogin />
+                  <div className='w-full lg:w-[360px] h-auto flex flex-col justify-center items-center gap-3'>
                     <button
-                      className='flex flex-row justify-center items-center px-[10px] py-[18px] gap-2 w-full lg:w-[360px] h-[44px]
-                                bg-black border-[1px] border-solid shadow-[0_0px_1px_2px_rgba(16,24,40,0.05)] rounded-lg '>
-                      <span className='w-full lg:w-[119px] h-[24px] font-inter font-semibold inline-block text-[16px] leading-6 text-[#ffffff]'>
-                        Sign In
-                      </span>
-                    </button>
-                  </div>
-                  <div className='w-full lg:w-[360px] h-[44px] flex flex-col justify-center items-center lg:pt-[10px] gap-3'>
-                    <button
-                      className='flex flex-row justify-center items-center px-[10px] py-[16px] gap-3 w-full lg:w-[360px] h-[44px]
+                      className='flex flex-row justify-center items-center px-[10px] py-[16px] gap-3 w-[280px] sm:w-[360px] h-[44px]
                                 bg-white border-[1px] border-solid shadow-[0_0px_1px_2px_rgba(16,24,40,0.05)] rounded-lg'>
                       <span className='inline-flex items-baseline'>
                         <img
@@ -114,7 +41,7 @@ function LogIn(): React.ReactElement {
                 </div>
                 <div className='w-[360px] h-[20px] flex flex-row justify-center items-start p-0 gap-1'>
                   <span className='w-[140px] h-[20px] font-inter font-normal text-[14px] leading-5 text-[#667085]'>
-                    Don't have account ?
+                    Don&apos;t have account ?
                   </span>
                   <div className='flex flex-row items-start p-0 w-[51px] h-[20px]'>
                     <button className='flex flex-row justify-center items-center p-0 gap-2 w-[51px] h-[20px] '>
@@ -150,7 +77,7 @@ function LogIn(): React.ReactElement {
               </div>
             </div>
           </section>
-          <section className='w-full h-full hidden md:block '>
+          <section className='w-full h-auto hidden md:block '>
             <img
               src='./bg-logIn.jpg'
               alt='background.jpg'
