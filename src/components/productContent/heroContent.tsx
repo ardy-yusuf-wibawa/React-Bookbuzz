@@ -16,7 +16,7 @@ const heroContent = (): React.ReactElement => {
             <p className='text-[16px] font-normal'>
               You can custom any design book.
             </p>
-            <button className='bg-cyan-500 h-[44px] w-[120px] rounded-xl mt-4'>
+            <button className='bg-black text-white font-medium h-[44px] w-[120px] rounded-xl mt-4'>
               <p>Shop Now</p>
             </button>
           </div>
