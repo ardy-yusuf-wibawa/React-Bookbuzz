@@ -14,9 +14,9 @@ const aboutUs = (): React.ReactElement => {
         </div>
       </div>
       {/* Intro Section */}
-      <div className='inline-block md:flex items-center justify-center mx-auto px-4'>
-        <div className='w-1/2 '>
-          <h1 className='font-extrabold leading-[43.57px]'>WELCOME TO BOOKBUZZ</h1>
+      <div className='inline-block md:flex items-center justify-center mx-auto px-4 max-w-7xl text-center'>
+        <div className='w-1/2 max-w-[500px] items-center mx-auto'>
+          <h1 className='font-extrabold leading-[43.57px] text-[36px]'>WELCOME TO BOOKBUZZ</h1>
           <p className='font-normal text-sm mt-3'>
             Welcome to our online bookstore! We have a vast collection of books <br /> for all ages
             and interests, with the option to purchase online for home <br /> delivery or pickup at
@@ -53,7 +53,7 @@ const aboutUs = (): React.ReactElement => {
           </div>
         </div>
       </div>
-      <div className='grid lg:grid-cols-2 mt-20 gap-8 sm:grid-cols-1'>
+      <div className='flex max-w-7xl mx-auto items-center justify-center text-center gap-[100px] mt-[150px]'>
         <div className=''>
           <h1 className='font-bold text-2xl leading-[29.05px]'>OUR MESSAGE</h1>
           <p className='font normal text-sm'>
@@ -75,15 +75,17 @@ const aboutUs = (): React.ReactElement => {
           <p className='font normal text-sm'>quarta decima et quinta decima.</p>
         </div>
       </div>
-      <div className='mt-4'>
-        <h1 className='text-[32px] font-bold'>OUR GOAL</h1>
-        <p className='font normal text-sm'>
+      <div className='flex items-center text-center max-w-7xl mx-auto flex-column justify-center mt-[50px] mb-[100px]'>
+        <div className='flex flex-col'>
+          <h1 className='text-[32px] font-bold'>OUR GOAL</h1>
+          <p className='font normal text-sm'>
           Mirum est notare quam littera gothica, quam nunc putamus parum
-        </p>
-        <p className='font normal text-sm'>
+          </p>
+          <p className='font normal text-sm'>
           claram, anteposuerit litterarum formas humanitatis per seacula
-        </p>
-        <p className='font normal text-sm'>quarta decima et quinta decima.</p>
+          </p>
+          <p className='font normal text-sm'>quarta decima et quinta decima.</p>
+        </div>
       </div>
       <Footer />
     </div>
