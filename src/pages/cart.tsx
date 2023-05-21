@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import DetailCart from './DetailCart'
+// import axios from 'axios'
+import DetailCart from '../components/cart/DetailCart'
 
 interface CartBarProps {
   items: Array<{
@@ -34,13 +35,36 @@ interface Items {
   id: number
   item: string
   qty: number
+  price: number
 }
 
 function Cart() {
-  const [items, setItems] = useState<Items[]>([{ id: 1, item: 'Dilan 1990 - $29.99', qty: 1 }, { id: 2, item: 'Lupus 2002 - $12.99', qty: 1 }])
+  const [items, setItems] = useState<Items[]>([
+    { id: 1, item: 'Dilan 1990', price: 29.99, qty: 1 },
+    { id: 2, item: 'Lupus 2002', price: 12.99, qty: 1 }
+  ])
   useEffect(() => {
     console.log('🚀 ~ file: cart.tsx:50 ~ Cart ~ items:', items)
   }, [items])
+
+  // const [carts, setCarts] = useState<Product[]>([])
+
+  // useEffect(() => {
+  //   // Fetch data from the API
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get('http://172.29.114.152:3131/order')
+  //       const data = response.data
+  //       setCarts(data.data)
+  //       console.log(data.data)
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error)
+  //     }
+  //   }
+
+  //   void fetchData()
+  // }, [])
+
   return (
     <section className='mx-auto w-full max-h-[100vh] relative'>
       <div className='flex left-0 top-0 items-center w-full'>
@@ -217,9 +241,12 @@ function Cart() {
               </div>
             </div>
             <div className='flex flex-col items-center px-4 pt-[55px] pb-[10px] w-[50%] h-full gap-y-3 bg-slate-100 border rounded-md mt-32 mx-12'>
-              <DetailCart items={items} handleChangeItems={(val) => {
-                setItems(val)
-              }} />
+              <DetailCart
+                items={items}
+                handleChangeItems={(val) => {
+                  setItems(val)
+                }}
+              />
             </div>
           </section>
         </div>

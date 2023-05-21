@@ -26,6 +26,9 @@ interface Product {
   review_id: number
   createdAt: string
   updatedAt: string
+  review: {
+    avgRating: number
+  }
 }
 
 const bookGenre = [
@@ -64,7 +67,7 @@ function ProductContent(): JSX.Element {
     // Fetch data from the API
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://172.29.114.152:3131/productlist')
+        const response = await axios.get('http://172.29.114.152:3131/product')
         const data = response.data
         setProducts(data.data)
         console.log(data.data)
@@ -167,6 +170,7 @@ function ProductContent(): JSX.Element {
                 key={index}
                 name={product.author}
                 img={product.thumbnail}
+                rating={product.review.avgRating}
                 nameProduct={product.title_book}
                 price={product.price}
               />

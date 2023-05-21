@@ -18,6 +18,9 @@ interface Product {
   review_id: number
   createdAt: string
   updatedAt: string
+  review: {
+    avgRating: number
+  }
 }
 
 function ProductListFilter(): React.ReactElement {
@@ -30,7 +33,7 @@ function ProductListFilter(): React.ReactElement {
     // Fetch data from the API
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://172.29.114.152:3131/productlist')
+        const response = await axios.get('http://172.29.114.152:3131/product')
         const data = response.data
         setProducts(data.data)
         console.log(data.data)
@@ -41,7 +44,6 @@ function ProductListFilter(): React.ReactElement {
 
     void fetchData()
   }, [])
-
 
   const handlePageChange = (pageNumber: number): void => {
     setCurrentPage(pageNumber)
@@ -55,6 +57,8 @@ function ProductListFilter(): React.ReactElement {
 
   const startIndex = (currentPage - 1) * itemsPerPage
   const endIndex = startIndex + itemsPerPage
+  const startRange = startIndex + 1
+  const endRange = Math.min(endIndex, products.length)
 
   return (
     <>
@@ -117,7 +121,7 @@ function ProductListFilter(): React.ReactElement {
                               3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z'></path>
           </svg>
           <input
-            placeholder={`Showing 1-${totalResults} of ${Data.length} results`}
+            placeholder={`Showing ${startRange}-${endRange} of ${products.length} results`}
             className='w-auto h-[17px] font-inter font-normal text-sm'
           />
           <div className='ml-auto gap-4 flex'>
@@ -130,8 +134,6 @@ function ProductListFilter(): React.ReactElement {
               <option value='3'>3</option>
               <option value='6'>6</option>
               <option value='9'>9</option>
-
-
             </select>
             <label htmlFor='books'>Sort by:</label>
             <select
@@ -335,23 +337,22 @@ function ProductListFilter(): React.ReactElement {
           <div className='relative container px-[50px] py-10 w-[960px] h-[1380px] flex items-start flex-col'>
             <Link to='/product'>
               <div className='mx-auto grid px-4 w-full sm:py-[20px] lg:grid-cols-3 sm:gap-y-[1vh] pt-[200px] pb-10 grid-cols-1 gap-y-[300px] gap-[30px]'>
-
                 {products.slice(startIndex, endIndex).map((product, index) => (
                   <ContentData
                     key={index}
                     name={product.author}
                     img={product.thumbnail}
+                    rating={product.review.avgRating}
                     nameProduct={product.title_book}
                     price={product.price}
                   />
                 ))}
-
               </div>
             </Link>
             <div className='flex justify-between items-center w-auto h-[150px]'>
               <div className='px-4 flex justify-between items-center w-auto h-[50px] border-t-2 border-b-2'>
                 <span className='items-center flex justify-start relative w-[425px] text-[12px] h-[17px]'>
-                  {`Showing 1-${totalResults} of ${Data.length} results`}
+                  {`Showing ${startRange}-${endRange} of ${products.length} results`}
                 </span>
                 <div className='items-center text-[12px] justify-end flex relative w-[400px] h-[17px] gap-[30px]'>
                   <FilterPagination
