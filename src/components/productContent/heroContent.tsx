@@ -12,12 +12,11 @@ const heroContent = (): React.ReactElement => {
           {/* -hero-txt */}
           <div className='flex flex-col justify-start text-left'>
             <p className='text-[24px] font-normal'>New Arrival</p>
-            <p className='text-[70px] font-normal'>LED DESK BRAND</p>
+            <p className='text-[70px] font-medium'>CUSTOM BOOK</p>
             <p className='text-[16px] font-normal'>
-              Next generation LED lamp. A multi-function LED lamp that is environmentally
-              <br /> friendly and soft on the eyes.
+              You can custom any design book.
             </p>
-            <button>
+            <button className='bg-black text-white font-medium h-[44px] w-[120px] rounded-xl mt-4'>
               <p>Shop Now</p>
             </button>
           </div>
