@@ -40,11 +40,11 @@ interface Items {
 
 function Cart() {
   const [items, setItems] = useState<Items[]>([
-    { id: 1, item: 'Dilan 1990', price: 29.99, qty: 1 },
-    { id: 2, item: 'Lupus 2002', price: 12.99, qty: 1 }
+    { id: 1, item: 'Dilan 1990', price: 29, qty: 1 },
+    { id: 2, item: 'Lupus 2002', price: 12, qty: 1 }
   ])
   useEffect(() => {
-    console.log('🚀 ~ file: cart.tsx:50 ~ Cart ~ items:', items)
+    console.log('file: cart.tsx:50 ~ Cart ~ items:', items)
   }, [items])
 
   // const [carts, setCarts] = useState<Product[]>([])
