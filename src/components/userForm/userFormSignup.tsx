@@ -2,40 +2,59 @@ import React from 'react'
 import { Formik, Form, type FormikHelpers } from 'formik'
 import * as Yup from 'yup'
 import CustomInput from './customForm/customUserForm'
+import axios from 'axios'
 
 const initialValues = {
-  userFullName: '',
-  userEmail: '',
-  userPassword: ''
+  fullname: '',
+  username: '',
+  email: '',
+  password: ''
 }
 
 const validationSchema = Yup.object().shape({
-  userFullName: Yup.string()
+  fullname: Yup.string()
     .required('Name is required.')
     .matches(/^[A-Za-z]+([ A-Za-z]+)*$/, { message: 'Please provide a valid name.' }),
-  userEmail: Yup.string()
-    .required('Email is required.')
-    .email('Please provide a valid email address.'),
-  userPassword: Yup.string()
-    .required('Password is required.')
-    .min(8, 'Must be at least 8 characters.')
+  username: Yup.string()
+    .required('Name is required.')
+    .matches(/^[A-Za-z]+([ A-Za-z]+)*$/, { message: 'Please provide a valid name.' }),
+  email: Yup.string().required('Email is required.').email('Please provide a valid email address.'),
+  password: Yup.string().required('Password is required.').min(8, 'Must be at least 8 characters.')
 })
 
 interface FormValues {
-  userFullName: string
-  userEmail: string
-  userPassword: string
+  fullname: string
+  username: string
+  email: string
+  password: string
 }
 
-const handleSubmit = (values: FormValues, { setSubmitting }: FormikHelpers<FormValues>) => {
-  console.log(values)
-  setSubmitting(false)
+const handleSubmit = async (values: FormValues, { setSubmitting }: FormikHelpers<FormValues>) => {
+  try {
+    const response = await axios.post('http://172.29.114.152:3131/users', values, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    console.log(response.data)
+    // Handle the successful response from the backend
+  } catch (error) {
+    console.error(error)
+    // Handle errors from the backend
+  } finally {
+    setSubmitting(false)
+  }
 }
+// const handleSubmit = (values: FormValues, { setSubmitting }: FormikHelpers<FormValues>) => {
+//   console.log(values)
+//   setSubmitting(false)
+// }
 
 const TypeInput = [
-  { type: 'text', name: 'userFullName', placeholder: 'Name' },
-  { type: 'email', name: 'userEmail', placeholder: 'Email' },
-  { type: 'password', name: 'userPassword', placeholder: 'Password' }
+  { type: 'string', name: 'fullname', placeholder: 'Full Name' },
+  { type: 'string', name: 'username', placeholder: 'User Name' },
+  { type: 'email', name: 'email', placeholder: 'Email' },
+  { type: 'password', name: 'password', placeholder: 'Password' }
 ]
 
 const FormSignup = (): React.ReactElement => {

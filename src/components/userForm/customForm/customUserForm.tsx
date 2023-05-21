@@ -2,9 +2,10 @@ import React from 'react'
 import { Field, ErrorMessage, useFormikContext } from 'formik'
 
 interface FormValues {
-  userFullName: string
-  userEmail: string
-  userPassword: string
+  fullname: string
+  username: string
+  email: string
+  password: string
 }
 
 interface CustomInputProps {

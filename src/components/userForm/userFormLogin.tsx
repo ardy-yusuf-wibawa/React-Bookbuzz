@@ -2,10 +2,11 @@ import React from 'react'
 import { Formik, Form, type FormikHelpers } from 'formik'
 import * as Yup from 'yup'
 import CustomInput from './customForm/customUserForm'
+import axios from 'axios'
 
 const initialValues = {
-  userEmail: '',
-  userPassword: ''
+  email: '',
+  password: ''
 }
 
 const validationSchema = Yup.object().shape({
@@ -18,18 +19,29 @@ const validationSchema = Yup.object().shape({
 })
 
 interface FormValues {
-  userEmail: string
-  userPassword: string
+  email: string
+  password: string
 }
-
-const handleSubmit = (values: FormValues, { setSubmitting }: FormikHelpers<FormValues>) => {
-  console.log(values)
-  setSubmitting(false)
+const handleSubmit = async (values: FormValues, { setSubmitting }: FormikHelpers<FormValues>) => {
+  try {
+    const response = await axios.post('http://172.29.114.152:3131/login', values, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    console.log(response.data)
+    // Handle the successful response from the backend
+  } catch (error) {
+    console.error(error)
+    // Handle errors from the backend
+  } finally {
+    setSubmitting(false)
+  }
 }
 
 const TypeInput = [
-  { type: 'email', name: 'userEmail', placeholder: 'Email' },
-  { type: 'password', name: 'userPassword', placeholder: 'Password' }
+  { type: 'email', name: 'email', placeholder: 'Email' },
+  { type: 'password', name: 'password', placeholder: 'Password' }
 ]
 
 const FormLogin = (): React.ReactElement => {
