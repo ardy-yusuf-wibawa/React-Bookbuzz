@@ -22,7 +22,7 @@ const featuredProductWrapper = (): React.ReactElement => {
         </p>
       </div>
       <Link to='/product'>
-        <div className='flex flex-wrap gap-[30px] mx-[179px] mb-[106px] items-center justify-center '>
+        <div className='flex flex-wrap gap-[30px]  mb-[106px] items-center justify-center max-w-7xl mx-auto'>
           {List.map((v, i) => {
             return (
               <ProductProp

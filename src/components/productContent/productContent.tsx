@@ -27,7 +27,7 @@ function BookGenreMenu({ items }: GenreBook) {
         <ul
           className=''
           key={item.genre}>
-          <li className='rounded-sm text-slate-900/50 bg-slate-500/20'>
+          <li className='rounded-sm text-slate-900/50 bg-slate-500/20 h-[40px] flex items-center px-2'>
             <Link
               to={item.src}
               className='font-inter text-[14px] leading-[17px]'>

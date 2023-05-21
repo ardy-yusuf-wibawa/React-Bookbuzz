@@ -2,7 +2,7 @@ import React from 'react'
 
 const CategoryWrapper = (): React.ReactElement => {
   return (
-    <div className='container mx-auto px-12 md:flex justify-center gap-5 mt-8'>
+    <div className='container mx-auto px-12 md:flex justify-center gap-5 my-[125px]'>
       <img
         className='pt-10'
         src='./buku1.png'

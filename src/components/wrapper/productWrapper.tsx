@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaInstagram, FaWhatsapp, FaTwitter, FaFacebook, FaCcPaypal, FaCcVisa, FaCcMastercard, FaBitcoin } from 'react-icons/fa'
+
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
@@ -115,16 +117,16 @@ const ProductWrapper = (): React.ReactElement => {
                 <p className='mb-2 text-base font-medium'>Share This Product</p>
                 <div className='flex flex-row gap-2'>
                   <button>
-                    <i className='fa-brands fa-square-instagram fa-2xl'></i>
+                    <FaInstagram />
                   </button>
                   <button>
-                    <i className='fa-brands fa-square-whatsapp fa-2xl'></i>
+                    <FaWhatsapp />
                   </button>
                   <button>
-                    <i className='fa-brands fa-square-facebook fa-2xl'></i>
+                    <FaFacebook />
                   </button>
                   <button>
-                    <i className='fa-brands fa-square-twitter fa-2xl'></i>
+                    <FaTwitter />
                   </button>
                 </div>
               </div>
@@ -133,16 +135,16 @@ const ProductWrapper = (): React.ReactElement => {
                 <p className='mb-2 text-base font-medium'>Payment Method</p>
                 <div className='flex flex-row gap-2'>
                   <button>
-                    <i className='fa-brands fa-cc-paypal fa-2xl'></i>
+                    <FaCcPaypal />
                   </button>
                   <button>
-                    <i className='fa-brands fa-cc-visa fa-2xl'></i>
+                    <FaCcVisa />
                   </button>
                   <button>
-                    <i className='fa-brands fa-cc-mastercard fa-2xl'></i>
+                    <FaCcMastercard />
                   </button>
                   <button>
-                    <i className='fa-brands fa-bitcoin fa-2xl'></i>
+                    <FaBitcoin />
                   </button>
                 </div>
               </div>
